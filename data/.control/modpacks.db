@@ -1,0 +1,9 @@
+
+[info]
+options="+mpdb"
+
+[modpacks]
+mp={"name","type","version"
+"Alien","Ruleset","2.6.0.01"
+"Alienmusic","Musicset","0.1"
+}

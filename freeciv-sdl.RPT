@@ -1,0 +1,551 @@
+-------------------
+
+Error occurred on Sunday, December 22, 2019 at 10:43:27.
+
+freeciv-sdl.exe caused an Access Violation at location 00426EB5 in module freeciv-sdl.exe Reading from location 0000000C.
+
+Registers:
+eax=09e66210 ebx=09079f50 ecx=000000ff edx=00000032 esi=00000000 edi=0000002d
+eip=00426eb5 esp=0170fa90 ebp=00000000 iopl=0         nv up ei pl nz na pe nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00210202
+
+AddrPC   Params
+
+freeciv-sdl.exe
+ntdll.dll   	6.2.17763.475
+KERNEL32.DLL	6.2.17763.475
+KERNELBASE.dll	6.2.17763.475
+ADVAPI32.DLL	6.2.17763.1
+msvcrt.dll  	7.0.17763.475
+sechost.dll 	6.2.17763.1
+RPCRT4.dll  	6.2.17763.379
+SspiCli.dll 	6.2.17763.1
+CRYPTBASE.dll	6.2.17763.1
+bcryptPrimitives.dll	6.2.17763.1
+SHELL32.DLL 	6.2.17763.348
+cfgmgr32.dll	6.2.17763.1
+ucrtbase.dll	6.2.17763.404
+shcore.dll  	6.2.17763.1
+combase.dll 	6.2.17763.404
+windows.storage.dll	6.2.17763.503
+msvcp_win.dll	6.2.17763.1
+profapi.dll 	6.2.17763.1
+powrprof.dll	6.2.17763.1
+shlwapi.dll 	6.2.17763.1
+GDI32.dll   	6.2.17763.1
+gdi32full.dll	6.2.17763.475
+USER32.dll  	6.2.17763.168
+win32u.dll  	6.2.17763.1
+kernel.appcore.dll	6.2.17763.1
+cryptsp.dll 	6.2.17763.1
+WS2_32.dll  	6.2.17763.1
+libbz2-2.dll
+libiconv-2.dll	1.13.1.0
+libintl-8.dll	0.18.2.0
+liblzma-5.dll	5.0.7.0
+libcurl.dll 	7.40.0.0
+wldap32.dll 	6.2.17763.475
+SDL.dll     	1.2.14.0
+libMagickWand-6.Q16-1.dll
+SDL_ttf.dll 	2.0.11.0
+libSDL_gfx-15.dll
+SDL_image.dll	1.2.10.0
+zlib1.dll   	1.2.8.0
+WINMM.DLL   	6.2.17763.1
+SDL_mixer.dll	1.2.11.0
+libgcc_s_dw2-1.dll
+libidn-11.dll
+pthreadGC2.dll	2.8.0.0
+SSLEAY32.dll	1.0.2.8
+WINMMBASE.dll	6.2.17763.1
+WSOCK32.DLL 	6.2.17763.1
+libfreetype-6.dll
+libMagickCore-6.Q16-1.dll
+freetype6.dll
+libgobject-2.0-0.dll	2.36.1.0
+libfontconfig-1.dll
+libpangocairo-1.0-0.dll	1.32.6.0
+libpango-1.0-0.dll	1.32.6.0
+libpng14-14.dll
+libffi-6.dll
+libpthread-2.dll	2.8.0.0
+libglib-2.0-0.dll	2.36.1.0
+OLE32.dll   	6.2.17763.503
+libxml2-2.dll
+libgmodule-2.0-0.dll	2.36.1.0
+LIBEAY32.dll	1.0.2.8
+libcairo-2.dll
+libpangowin32-1.0-0.dll	1.32.6.0
+USP10.DLL   	6.2.17763.1
+MSIMG32.DLL 	6.2.17763.1
+libpng15-15.dll
+libpixman-1-0.dll
+IMM32.DLL   	6.2.17763.1
+exchndl.dll 	0.8.1.0
+PSAPI.DLL   	6.2.17763.1
+VERSION.dll 	6.2.17763.1
+mgwhelp.dll 	0.8.1.0
+dbghelp.dll 	6.2.17763.1
+dbgcore.DLL 	6.2.17763.1
+uxtheme.dll 	6.2.17763.1
+MSCTF.dll   	6.2.17763.348
+OLEAUT32.dll	6.2.17763.437
+dwmapi.dll  	6.2.17763.1
+CRYPT32.dll 	6.2.17763.1
+MSASN1.dll  	6.2.17763.1
+clbcatq.dll 	2001.12.10941.16384
+propsys.dll 	7.0.17763.348
+libpng12-0.dll
+TextInputFramework.dll	6.2.17763.1
+CoreUIComponents.dll	6.2.17763.1
+CoreMessaging.dll	6.2.17763.194
+ntmarta.dll 	6.2.17763.1
+wintypes.dll	6.2.17763.1
+DSOUND.DLL  	6.2.17763.348
+MMDevApi.dll	6.2.17763.1
+DEVOBJ.dll  	6.2.17763.1
+AUDIOSES.DLL	6.2.17763.348
+AVRT.dll    	6.2.17763.1
+wdmaud.drv  	6.2.17763.1
+ksuser.dll  	6.2.17763.1
+msacm32.drv 	6.2.17763.1
+MSACM32.dll 	6.2.17763.1
+midimap.dll 	6.2.17763.1
+Windows.UI.dll	6.2.17763.168
+InputHost.dll
+d2d1.dll    	6.2.17763.1
+d3d11.dll   	6.2.17763.1
+twinapi.appcore.dll	6.2.17763.292
+dxgi.dll    	6.2.17763.1
+RMCLIENT.dll	6.2.17763.194
+libvorbisfile-3.dll
+libvorbis-0.dll
+libogg-0.dll
+mswsock.dll 	6.2.17763.292
+DNSAPI.dll  	6.2.17763.404
+NSI.dll     	6.2.17763.1
+IPHLPAPI.DLL	6.2.17763.1
+fwpuclnt.dll	6.2.17763.1
+bcrypt.dll  	6.2.17763.1
+rasadhlp.dll	6.2.17763.1
+
+Windows 6.2.9200
+DrMingw 0.8.1
+
+-------------------
+
+Error occurred on Sunday, December 22, 2019 at 10:52:40.
+
+freeciv-sdl.exe caused an Access Violation at location 00418AA3 in module freeciv-sdl.exe Reading from location 00000020.
+
+Registers:
+eax=00000000 ebx=005ee950 ecx=758085f4 edx=00000000 esi=0cee3460 edi=07a7c850
+eip=00418aa3 esp=0170fa70 ebp=0000e994 iopl=0         nv up ei pl nz na po nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00210206
+
+AddrPC   Params
+00418AA3 75A0DBDF 0000012C 00000000  freeciv-sdl.exe!apply_callback  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/optiondlg.c @ 423]
+75A0DC60 0000012C 00000000 0170FAB8  KERNELBASE.dll!SleepEx
+75A0DBDF 05AE6FA8 00000001 0000000D  KERNELBASE.dll!Sleep
+004269C0 008890E0 00000001 00000002  freeciv-sdl.exe!widget_pressed_action  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/widget.c @ 325]
+68106731 05AE6FA8 00000000 00000000  SDL.dll!SDL_PollEvent
+0040313B 0000E93C 00000000 0000E994  freeciv-sdl.exe!gui_event_loop  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/gui_main.c @ 679]
+
+freeciv-sdl.exe
+ntdll.dll   	6.2.17763.475
+KERNEL32.DLL	6.2.17763.475
+KERNELBASE.dll	6.2.17763.475
+ADVAPI32.DLL	6.2.17763.1
+msvcrt.dll  	7.0.17763.475
+sechost.dll 	6.2.17763.1
+RPCRT4.dll  	6.2.17763.379
+SspiCli.dll 	6.2.17763.1
+CRYPTBASE.dll	6.2.17763.1
+bcryptPrimitives.dll	6.2.17763.1
+SHELL32.DLL 	6.2.17763.348
+cfgmgr32.dll	6.2.17763.1
+ucrtbase.dll	6.2.17763.404
+libbz2-2.dll
+shcore.dll  	6.2.17763.1
+libcurl.dll 	7.40.0.0
+libiconv-2.dll	1.13.1.0
+USER32.dll  	6.2.17763.168
+combase.dll 	6.2.17763.404
+libintl-8.dll	0.18.2.0
+win32u.dll  	6.2.17763.1
+liblzma-5.dll	5.0.7.0
+libMagickWand-6.Q16-1.dll
+windows.storage.dll	6.2.17763.503
+GDI32.dll   	6.2.17763.1
+SDL.dll     	1.2.14.0
+gdi32full.dll	6.2.17763.475
+msvcp_win.dll	6.2.17763.1
+libSDL_gfx-15.dll
+SDL_ttf.dll 	2.0.11.0
+profapi.dll 	6.2.17763.1
+wldap32.dll 	6.2.17763.475
+libgcc_s_dw2-1.dll
+powrprof.dll	6.2.17763.1
+WS2_32.dll  	6.2.17763.1
+pthreadGC2.dll	2.8.0.0
+shlwapi.dll 	6.2.17763.1
+libMagickCore-6.Q16-1.dll
+kernel.appcore.dll	6.2.17763.1
+WINMM.DLL   	6.2.17763.1
+libfreetype-6.dll
+cryptsp.dll 	6.2.17763.1
+LIBEAY32.dll	1.0.2.8
+zlib1.dll   	1.2.8.0
+WSOCK32.DLL 	6.2.17763.1
+libfontconfig-1.dll
+libidn-11.dll
+freetype6.dll
+libpango-1.0-0.dll	1.32.6.0
+libgobject-2.0-0.dll	2.36.1.0
+libpangocairo-1.0-0.dll	1.32.6.0
+libpng14-14.dll
+libpthread-2.dll	2.8.0.0
+winmmbase.dll	6.2.17763.1
+SDL_image.dll	1.2.10.0
+SDL_mixer.dll	1.2.11.0
+libxml2-2.dll
+libglib-2.0-0.dll	2.36.1.0
+libffi-6.dll
+OLE32.dll   	6.2.17763.503
+libgmodule-2.0-0.dll	2.36.1.0
+SSLEAY32.dll	1.0.2.8
+libcairo-2.dll
+libpangowin32-1.0-0.dll	1.32.6.0
+USP10.DLL   	6.2.17763.1
+MSIMG32.DLL 	6.2.17763.1
+libpng15-15.dll
+libpixman-1-0.dll
+IMM32.DLL   	6.2.17763.1
+exchndl.dll 	0.8.1.0
+PSAPI.DLL   	6.2.17763.1
+mgwhelp.dll 	0.8.1.0
+VERSION.dll 	6.2.17763.1
+dbghelp.dll 	6.2.17763.1
+dbgcore.DLL 	6.2.17763.1
+uxtheme.dll 	6.2.17763.1
+MSCTF.dll   	6.2.17763.348
+OLEAUT32.dll	6.2.17763.437
+dwmapi.dll  	6.2.17763.1
+CRYPT32.dll 	6.2.17763.1
+MSASN1.dll  	6.2.17763.1
+clbcatq.dll 	2001.12.10941.16384
+propsys.dll 	7.0.17763.348
+libpng12-0.dll
+TextInputFramework.dll	6.2.17763.1
+CoreUIComponents.dll	6.2.17763.1
+CoreMessaging.dll	6.2.17763.194
+ntmarta.dll 	6.2.17763.1
+wintypes.dll	6.2.17763.1
+DSOUND.DLL  	6.2.17763.348
+MMDevApi.dll	6.2.17763.1
+DEVOBJ.dll  	6.2.17763.1
+AUDIOSES.DLL	6.2.17763.348
+AVRT.dll    	6.2.17763.1
+wdmaud.drv  	6.2.17763.1
+ksuser.dll  	6.2.17763.1
+msacm32.drv 	6.2.17763.1
+MSACM32.dll 	6.2.17763.1
+midimap.dll 	6.2.17763.1
+Windows.UI.dll	6.2.17763.168
+InputHost.dll
+twinapi.appcore.dll	6.2.17763.292
+d2d1.dll    	6.2.17763.1
+d3d11.dll   	6.2.17763.1
+RMCLIENT.dll	6.2.17763.194
+dxgi.dll    	6.2.17763.1
+libvorbisfile-3.dll
+libvorbis-0.dll
+libogg-0.dll
+mswsock.dll 	6.2.17763.292
+DNSAPI.dll  	6.2.17763.404
+NSI.dll     	6.2.17763.1
+IPHLPAPI.DLL	6.2.17763.1
+fwpuclnt.dll	6.2.17763.1
+bcrypt.dll  	6.2.17763.1
+rasadhlp.dll	6.2.17763.1
+
+Windows 6.2.9200
+DrMingw 0.8.1
+
+-------------------
+
+Error occurred on Sunday, December 22, 2019 at 10:58:03.
+
+freeciv-sdl.exe caused an Access Violation at location 00418AA3 in module freeciv-sdl.exe Reading from location 00000020.
+
+Registers:
+eax=00000000 ebx=005ee950 ecx=758085f4 edx=00000000 esi=0d120aa0 edi=041c95b0
+eip=00418aa3 esp=0170fa70 ebp=00007355 iopl=0         nv up ei pl nz na po nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00210206
+
+AddrPC   Params
+00418AA3 75A0DBDF 0000012C 00000000  freeciv-sdl.exe!apply_callback  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/optiondlg.c @ 423]
+75A0DC60 0000012C 00000000 0170FAB8  KERNELBASE.dll!SleepEx
+75A0DBDF 041C87B0 00000001 0000006B  KERNELBASE.dll!Sleep
+004269C0 008890E0 00000001 00000002  freeciv-sdl.exe!widget_pressed_action  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/widget.c @ 325]
+68106731 041C87B0 00000000 00000000  SDL.dll!SDL_PollEvent
+0040313B 0000730E 00000000 00007355  freeciv-sdl.exe!gui_event_loop  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/gui_main.c @ 679]
+
+freeciv-sdl.exe
+ntdll.dll   	6.2.17763.475
+KERNEL32.DLL	6.2.17763.475
+KERNELBASE.dll	6.2.17763.475
+ADVAPI32.DLL	6.2.17763.1
+msvcrt.dll  	7.0.17763.475
+sechost.dll 	6.2.17763.1
+RPCRT4.dll  	6.2.17763.379
+SspiCli.dll 	6.2.17763.1
+CRYPTBASE.dll	6.2.17763.1
+bcryptPrimitives.dll	6.2.17763.1
+SHELL32.DLL 	6.2.17763.348
+cfgmgr32.dll	6.2.17763.1
+ucrtbase.dll	6.2.17763.404
+shcore.dll  	6.2.17763.1
+combase.dll 	6.2.17763.404
+windows.storage.dll	6.2.17763.503
+libbz2-2.dll
+msvcp_win.dll	6.2.17763.1
+profapi.dll 	6.2.17763.1
+libcurl.dll 	7.40.0.0
+powrprof.dll	6.2.17763.1
+USER32.dll  	6.2.17763.168
+win32u.dll  	6.2.17763.1
+shlwapi.dll 	6.2.17763.1
+GDI32.dll   	6.2.17763.1
+kernel.appcore.dll	6.2.17763.1
+gdi32full.dll	6.2.17763.475
+cryptsp.dll 	6.2.17763.1
+WS2_32.dll  	6.2.17763.1
+wldap32.dll 	6.2.17763.475
+libiconv-2.dll	1.13.1.0
+libintl-8.dll	0.18.2.0
+liblzma-5.dll	5.0.7.0
+libMagickWand-6.Q16-1.dll
+SDL.dll     	1.2.14.0
+libSDL_gfx-15.dll
+SDL_ttf.dll 	2.0.11.0
+libgcc_s_dw2-1.dll
+zlib1.dll   	1.2.8.0
+SDL_image.dll	1.2.10.0
+SDL_mixer.dll	1.2.11.0
+libidn-11.dll
+WINMM.DLL   	6.2.17763.1
+LIBEAY32.dll	1.0.2.8
+pthreadGC2.dll	2.8.0.0
+libMagickCore-6.Q16-1.dll
+libfreetype-6.dll
+WINMMBASE.dll	6.2.17763.1
+WSOCK32.DLL 	6.2.17763.1
+libfontconfig-1.dll
+freetype6.dll
+libgobject-2.0-0.dll	2.36.1.0
+libpango-1.0-0.dll	1.32.6.0
+libpng14-14.dll
+libpangocairo-1.0-0.dll	1.32.6.0
+libpthread-2.dll	2.8.0.0
+libxml2-2.dll
+libglib-2.0-0.dll	2.36.1.0
+libffi-6.dll
+OLE32.dll   	6.2.17763.503
+libgmodule-2.0-0.dll	2.36.1.0
+SSLEAY32.dll	1.0.2.8
+libcairo-2.dll
+libpangowin32-1.0-0.dll	1.32.6.0
+USP10.DLL   	6.2.17763.1
+MSIMG32.DLL 	6.2.17763.1
+libpng15-15.dll
+libpixman-1-0.dll
+IMM32.DLL   	6.2.17763.1
+exchndl.dll 	0.8.1.0
+PSAPI.DLL   	6.2.17763.1
+mgwhelp.dll 	0.8.1.0
+VERSION.dll 	6.2.17763.1
+dbghelp.dll 	6.2.17763.1
+dbgcore.DLL 	6.2.17763.1
+uxtheme.dll 	6.2.17763.1
+MSCTF.dll   	6.2.17763.348
+OLEAUT32.dll	6.2.17763.437
+dwmapi.dll  	6.2.17763.1
+CRYPT32.dll 	6.2.17763.1
+MSASN1.dll  	6.2.17763.1
+clbcatq.dll 	2001.12.10941.16384
+propsys.dll 	7.0.17763.348
+libpng12-0.dll
+TextInputFramework.dll	6.2.17763.1
+CoreUIComponents.dll	6.2.17763.1
+CoreMessaging.dll	6.2.17763.194
+wintypes.dll	6.2.17763.1
+ntmarta.dll 	6.2.17763.1
+DSOUND.DLL  	6.2.17763.348
+MMDevApi.dll	6.2.17763.1
+DEVOBJ.dll  	6.2.17763.1
+AUDIOSES.DLL	6.2.17763.348
+AVRT.dll    	6.2.17763.1
+wdmaud.drv  	6.2.17763.1
+ksuser.dll  	6.2.17763.1
+msacm32.drv 	6.2.17763.1
+MSACM32.dll 	6.2.17763.1
+midimap.dll 	6.2.17763.1
+Windows.UI.dll	6.2.17763.168
+InputHost.dll
+twinapi.appcore.dll	6.2.17763.292
+d2d1.dll    	6.2.17763.1
+d3d11.dll   	6.2.17763.1
+RMCLIENT.dll	6.2.17763.194
+dxgi.dll    	6.2.17763.1
+libvorbisfile-3.dll
+libvorbis-0.dll
+libogg-0.dll
+mswsock.dll 	6.2.17763.292
+DNSAPI.dll  	6.2.17763.404
+NSI.dll     	6.2.17763.1
+IPHLPAPI.DLL	6.2.17763.1
+fwpuclnt.dll	6.2.17763.1
+bcrypt.dll  	6.2.17763.1
+rasadhlp.dll	6.2.17763.1
+
+Windows 6.2.9200
+DrMingw 0.8.1
+
+-------------------
+
+Error occurred on Sunday, December 22, 2019 at 13:32:43.
+
+freeciv-sdl.exe caused an Access Violation at location 00427992 in module freeciv-sdl.exe Reading from location 0000000C.
+
+Registers:
+eax=00000000 ebx=0170f8d8 ecx=00000076 edx=00000000 esi=00000076 edi=095fbde0
+eip=00427992 esp=0170f8a0 ebp=095fd070 iopl=0         nv up ei pl nz na pe nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00210202
+
+AddrPC   Params
+00427992 019D0000 00000000 00000000  freeciv-sdl.exe!draw_frame  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/client/gui-sdl/../../../../../client/gui-sdl/widget.c @ 1128]
+
+freeciv-sdl.exe
+ntdll.dll   	6.2.17763.475
+KERNEL32.DLL	6.2.17763.475
+KERNELBASE.dll	6.2.17763.475
+apphelp.dll 	6.2.17763.292
+ADVAPI32.DLL	6.2.17763.1
+msvcrt.dll  	7.0.17763.475
+sechost.dll 	6.2.17763.1
+RPCRT4.dll  	6.2.17763.379
+SspiCli.dll 	6.2.17763.1
+CRYPTBASE.dll	6.2.17763.1
+bcryptPrimitives.dll	6.2.17763.1
+SHELL32.DLL 	6.2.17763.348
+cfgmgr32.dll	6.2.17763.1
+libbz2-2.dll
+ucrtbase.dll	6.2.17763.404
+libiconv-2.dll	1.13.1.0
+libcurl.dll 	7.40.0.0
+libintl-8.dll	0.18.2.0
+shcore.dll  	6.2.17763.1
+USER32.dll  	6.2.17763.168
+liblzma-5.dll	5.0.7.0
+combase.dll 	6.2.17763.404
+win32u.dll  	6.2.17763.1
+windows.storage.dll	6.2.17763.503
+libMagickWand-6.Q16-1.dll
+SDL.dll     	1.2.14.0
+GDI32.dll   	6.2.17763.1
+msvcp_win.dll	6.2.17763.1
+libSDL_gfx-15.dll
+gdi32full.dll	6.2.17763.475
+profapi.dll 	6.2.17763.1
+SDL_ttf.dll 	2.0.11.0
+libgcc_s_dw2-1.dll
+wldap32.dll 	6.2.17763.475
+powrprof.dll	6.2.17763.1
+WS2_32.dll  	6.2.17763.1
+shlwapi.dll 	6.2.17763.1
+pthreadGC2.dll	2.8.0.0
+kernel.appcore.dll	6.2.17763.1
+libMagickCore-6.Q16-1.dll
+WINMM.DLL   	6.2.17763.1
+cryptsp.dll 	6.2.17763.1
+libfreetype-6.dll
+libidn-11.dll
+LIBEAY32.dll	1.0.2.8
+WSOCK32.DLL 	6.2.17763.1
+zlib1.dll   	1.2.8.0
+libfontconfig-1.dll
+freetype6.dll
+libgobject-2.0-0.dll	2.36.1.0
+libpango-1.0-0.dll	1.32.6.0
+libpangocairo-1.0-0.dll	1.32.6.0
+libpng14-14.dll
+libpthread-2.dll	2.8.0.0
+WINMMBASE.dll	6.2.17763.1
+SDL_image.dll	1.2.10.0
+SDL_mixer.dll	1.2.11.0
+libxml2-2.dll
+libglib-2.0-0.dll	2.36.1.0
+libffi-6.dll
+OLE32.dll   	6.2.17763.503
+libgmodule-2.0-0.dll	2.36.1.0
+SSLEAY32.dll	1.0.2.8
+libcairo-2.dll
+libpangowin32-1.0-0.dll	1.32.6.0
+USP10.DLL   	6.2.17763.1
+MSIMG32.DLL 	6.2.17763.1
+libpng15-15.dll
+libpixman-1-0.dll
+IMM32.DLL   	6.2.17763.1
+gameoverlayrenderer.dll	5.58.28.68
+PSAPI.DLL   	6.2.17763.1
+exchndl.dll 	0.8.1.0
+mgwhelp.dll 	0.8.1.0
+VERSION.dll 	6.2.17763.1
+dbghelp.dll 	6.2.17763.1
+dbgcore.DLL 	6.2.17763.1
+uxtheme.dll 	6.2.17763.1
+MSCTF.dll   	6.2.17763.348
+OLEAUT32.dll	6.2.17763.437
+dwmapi.dll  	6.2.17763.1
+CRYPT32.dll 	6.2.17763.1
+MSASN1.dll  	6.2.17763.1
+clbcatq.dll 	2001.12.10941.16384
+propsys.dll 	7.0.17763.348
+libpng12-0.dll
+TextInputFramework.dll	6.2.17763.1
+CoreUIComponents.dll	6.2.17763.1
+CoreMessaging.dll	6.2.17763.194
+ntmarta.dll 	6.2.17763.1
+wintypes.dll	6.2.17763.1
+DSOUND.DLL  	6.2.17763.348
+MMDevApi.dll	6.2.17763.1
+DEVOBJ.dll  	6.2.17763.1
+AUDIOSES.DLL	6.2.17763.348
+AVRT.dll    	6.2.17763.1
+wdmaud.drv  	6.2.17763.1
+ksuser.dll  	6.2.17763.1
+msacm32.drv 	6.2.17763.1
+MSACM32.dll 	6.2.17763.1
+midimap.dll 	6.2.17763.1
+Windows.UI.dll	6.2.17763.168
+InputHost.dll
+twinapi.appcore.dll	6.2.17763.292
+d2d1.dll    	6.2.17763.1
+d3d11.dll   	6.2.17763.1
+RMCLIENT.dll	6.2.17763.194
+dxgi.dll    	6.2.17763.1
+libvorbisfile-3.dll
+libvorbis-0.dll
+libogg-0.dll
+mswsock.dll 	6.2.17763.292
+DNSAPI.dll  	6.2.17763.404
+NSI.dll     	6.2.17763.1
+IPHLPAPI.DLL	6.2.17763.1
+fwpuclnt.dll	6.2.17763.1
+bcrypt.dll  	6.2.17763.1
+rasadhlp.dll	6.2.17763.1
+
+Windows 6.2.9200
+DrMingw 0.8.1
+
