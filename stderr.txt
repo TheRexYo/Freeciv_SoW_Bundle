@@ -1,1 +1,3 @@
 2: Using Video Output: windib
+2: Loading tileset "isow".
+2: Loading tileset "sowhex".

@@ -2,7 +2,7 @@
 
 name=_("Wasteraider")
 plural=_("?plural:Wasteraiders")
-groups="Medieval", "Early Modern", "European", "Core"
+groups="Medieval", "Early Modern", "Wastes Immune", "Core"
 legend=_("The Wasteraider Empire was created in death.
  The Skyfolk Empire, who also descended from the 
  Aetherians, had slowly driven them into the Wastes,

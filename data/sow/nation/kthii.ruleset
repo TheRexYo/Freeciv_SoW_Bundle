@@ -2,7 +2,7 @@
 
 name=_("Kth'ii")
 plural=_("?plural:Kth'ii")
-groups="Medieval", "Core", "Kth"
+groups="Medieval", "Core", "Kth", "Lava Immune"
 legend=_("\
 The Kth'ii are a vicious Kth tribe renowned\
  for its aggressive tendecies and preference\
@@ -14,6 +14,7 @@ The Kth'ii are a vicious Kth tribe renowned\
  at their ancient enemy - vowing that, someday\
  they would achieve freedom for all of\ 
  their kin.\
+ \n* Immune to the HP-Draining effects of Lava.\
 ")
 
 leaders = {

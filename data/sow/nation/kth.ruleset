@@ -2,11 +2,12 @@
 
 name=_("Kth")
 plural=_("?plural:Kth")
-groups="Ancient", "Extended", "Kth"
+groups="Ancient", "Extended", "Kth", "Lava Immune"
 legend=_("\
 The Kth are a race of intelligent insectoids that have\
  long warred with humanity. They are known for their\
  ruthless aggression and powerful insectoid cavalry.\
+\n* Immune to the HP-Draining effects of Lava.\
 ")
 
 leaders = {

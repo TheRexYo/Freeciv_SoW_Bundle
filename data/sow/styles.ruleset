@@ -174,13 +174,36 @@ reqs = { "type", "name", "range"
 ;		   and README.effects for help on requirements)
 ;
 ; */ <-- avoid gettext warnings
-
+[musicstyle_anarchy]
+music_peaceful     = "music_anarchy_peace"
+music_combat       = "music_anarchy_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+	
 [musicstyle_tribal]
 music_peaceful     = "music_tribal_peace"
 music_combat       = "music_tribal_combat"
 reqs	=
     { "type", "name", "range"
       "Gov", "Tribal", "Player"
+    }
+	
+[musicstyle_despotism]
+music_peaceful     = "music_despotism_peace"
+music_combat       = "music_despotism_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Despotism", "Player"
+    }
+	
+[musicstyle_fundamentalism]
+music_peaceful     = "music_fundamentalism_peace"
+music_combat       = "music_fundamentalism_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Fundamentalism", "Player"
     }
 
 [musicstyle_monarchy]
@@ -189,6 +212,30 @@ music_combat       = "music_monarchy_combat"
 reqs	=
     { "type", "name", "range"
       "Gov", "Monarchy", "Player"
+    }
+
+[musicstyle_republic]
+music_peaceful     = "music_republic_peace"
+music_combat       = "music_republic_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+    }
+
+[musicstyle_horde]
+music_peaceful     = "music_horde_peace"
+music_combat       = "music_horde_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Horde", "Player"
+    }
+
+[musicstyle_hive]
+music_peaceful     = "music_hive_peace"
+music_combat       = "music_hive_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Hive", "Player"
     }
 	
 [musicstyle_renaissance]

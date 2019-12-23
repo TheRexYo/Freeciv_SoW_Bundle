@@ -25,7 +25,7 @@ flag="viking"
 flag_alt="norway"
 style = "European"
 
-init_techs="Seafaring", "The Horde"
+init_techs="Seafaring"
 init_buildings=""
 init_units=""
 

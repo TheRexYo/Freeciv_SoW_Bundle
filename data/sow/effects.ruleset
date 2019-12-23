@@ -3681,90 +3681,86 @@ reqs    =
     { "type", "name", "range", "present"
       "Gov", "Horde", "Player", TRUE
     }
-	
-[effect_wasteland_harming_1]
-type    = "Unit_Recover"
-value   = -1
-reqs    =
-    { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth'ii", "Player", FALSE
-	  "Nation", "Kth", "Player", FALSE
-      "UnitClass", "Land", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-	  "Building", "Temple Desolus", "Player", FALSE
-    }
 
-[effect_wasteland_harming_2]
-type    = "Unit_Recover"
-value   = -1
-reqs    =
-    { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth", "Player", FALSE
-      "UnitClass", "Small Land", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-	  "Building", "Temple Desolus", "Player", FALSE
-    }
 
-[effect_wasteland_harming_3]
-type    = "Unit_Recover"
-value   = -1
+[effect_horde_diplomacy]
+type    = "No_Diplomacy"
+value   = 1
 reqs    =
-    { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth", "Player", FALSE
-      "Nation", "Kth'ii", "Player", FALSE
-      "UnitClass", "Big Land", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-	  "Building", "Temple Desolus", "Player", FALSE
-    }
-
-[effect_wasteland_harming_4]
-type    = "Unit_Recover"
-value   = -1
-reqs    =
-    { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth", "Player", FALSE
-      "Nation", "Kth'ii", "Player", FALSE
-      "UnitClass", "Merchant", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-	  "Building", "Temple Desolus", "Player", FALSE
-    }
-
-[effect_wasteland_harming_5]
-type    = "Unit_Recover"
-value   = -1
-reqs    =
-    { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth", "Player", FALSE
-      "Nation", "Kth'ii", "Player", FALSE
-      "UnitClass", "Burrowing", "Local", TRUE
-      "CityTile", "Center", "Local", FALSE
-	  "Building", "Temple Desolus", "Player", FALSE
+    { "type", "name", "range", "quiet"
+      "Gov", "Horde", "Player", TRUE
     }
 	
-[effect_wasteland_harming_6]
+[effect_verdant_healing]
 type    = "HP_Regen"
-value   = -1
+value   = 10
 reqs    =
     { "type", "name", "range", "present"
-      "Terrain", "Wastes", "Local", TRUE
-      "Nation", "Wasteraider", "Player", FALSE
-      "Nation", "Kth", "Player", FALSE
-      "Nation", "Kth'ii", "Player", FALSE
-      "UnitClass", "Amphibious", "Local", TRUE
+      "Terrain", "Verdant", "Local", TRUE
+      "NationGroup", "Verdant Bonus", "Player", FALSE
+      "UnitClass", "Flier", "Local", FALSE
+	  "UnitClass", "Air", "Local", FALSE
+	  "UnitClass", "Helicopter", "Local", FALSE
       "CityTile", "Center", "Local", FALSE
 	  "Building", "Temple Desolus", "Player", FALSE
     }
 
+[effect_verdant_bonus_healing]
+type    = "HP_Regen"
+value   = 25
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Verdant", "Local", TRUE
+      "NationGroup", "Verdant Bonus", "Player", TRUE
+      "UnitClass", "Flier", "Local", FALSE
+	  "UnitClass", "Air", "Local", FALSE
+	  "UnitClass", "Helicopter", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+	  "Building", "Temple Desolus", "Player", FALSE
+    }
+	
+[effect_wasteland_harming]
+type    = "Unit_Recover"
+value   = -3
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Wastes", "Local", TRUE
+      "NationGroup", "Wastes Immune", "Player", FALSE
+      "UnitClass", "Flier", "Local", FALSE
+	  "UnitClass", "Air", "Local", FALSE
+	  "UnitClass", "Helicopter", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+	  "Building", "Temple Desolus", "Player", FALSE
+    }
+
+[effect_blood_spires_harming]
+type    = "Unit_Recover"
+value   = -3
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Blood Spires", "Local", TRUE
+      "NationGroup", "Acid Immune", "Player", FALSE
+      "UnitClass", "Flier", "Local", FALSE
+	  "UnitClass", "Air", "Local", FALSE
+	  "UnitClass", "Helicopter", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+	  "Building", "Temple Desolus", "Player", FALSE
+    }
+	
+[effect_lava_flats_harming]
+type    = "Unit_Recover"
+value   = -3
+reqs    =
+    { "type", "name", "range", "present"
+      "Terrain", "Lava Flats", "Local", TRUE
+      "NationGroup", "Lava Immune", "Player", FALSE
+      "UnitClass", "Flier", "Local", FALSE
+	  "UnitClass", "Air", "Local", FALSE
+	  "UnitClass", "Helicopter", "Local", FALSE
+      "CityTile", "Center", "Local", FALSE
+	  "Building", "Temple Desolus", "Player", FALSE
+    }
+	
 [effect_imprinting]
 type    = "Veteran_Build"
 value   = 1

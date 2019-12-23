@@ -54,7 +54,7 @@ All nations, not necessarily balanced.\
 ;                 Default FALSE.
 ; match		= How much the AI will try to select a nation in the same
 ;                 group
-
+;Time Periods
 [ngroup_ancient]
 name=_("?nationgroup:Ancient")
 match=2
@@ -67,21 +67,21 @@ match=2
 [ngroup_modern]
 name=_("?nationgroup:Modern")
 match=1
-[ngroup_imaginary]
-name=_("?nationgroup:Imaginary")
-match=2
+;Places
 [ngroup_skyworld]
 name=_("?nationgroup:Skyworld")
 match=2
 [ngroup_erath]
 name=_("?nationgroup:Erath")
 match=2
+;Races
 [ngroup_kth]
 name=_("?nationgroup:Kth")
 match=1
 [ngroup_human]
 name=_("?nationgroup:Human")
 match=1
+;Nation Types
 [ngroup_event]
 name=_("?nationgroup:Event")
 match=0
@@ -90,7 +90,23 @@ hidden=true
 name=_("?nationgroup:Barbarian")
 match=0
 hidden=true
-
+;Gameplay-Related
+[ngroup_lava_immune]
+name=_("?nationgroup:Lava Immune")
+match=0
+hidden=true
+[ngroup_acid_immune]
+name=_("?nationgroup:Acid Immune")
+match=0
+hidden=true
+[ngroup_wastes_immune]
+name=_("?nationgroup:Wastes Immune")
+match=0
+hidden=true
+[ngroup_verdant_bonus]
+name=_("?nationgroup:Verdant Bonus")
+match=0
+hidden=true
 [compatibility]
 
 ; Compatibility: these nations are intended for use in a variety of

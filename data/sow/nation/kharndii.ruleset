@@ -2,7 +2,7 @@
 
 name=_("Kharndii")
 plural=_("?plural:Kharndiis")
-groups="Core", "Barbarian"
+groups="Extended"
 legend=_("\
 The most successful barbarian empire ever to\
  exist, the Kharndii were a ruthless force that\
@@ -27,8 +27,5 @@ init_gov="Horde"
 cities = 
  "Kharn",
  "Hun'si"
-
-is_playable = FALSE
-barbarian_type = "Land"
-
+ 
 ; nothing more needed for barbarians

@@ -34,6 +34,7 @@ flags =
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
     _("HelpWonder")
     _("Pyro"), _("Attack value halved when attacking unburnable units.")
+    _("Cryo"), _("Attack value halved when attacking unfreezable units.")
 	_("Beast")
 	_("Mounted")
 	_("WeakMelee"), _("Vulnerable to direct close-range combat.")
@@ -2981,7 +2982,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgZOC", "AirAttacker", "IgTer", "Mounted"
+flags         = "IgZOC", "AirAttacker", "IgTer", "Beast"
 targets       = "Air", "Helicopter", "Flier"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
@@ -2989,6 +2990,44 @@ Drakes are horse-sized relatives\
  of dragons that are especially\
  effective when it comes to fast,\
  long-distance aerial travel.\
+")
+
+
+[unit_blood_drakes]
+name          = _("Blood Drakes")
+class         = "Flier"
+tech_req      = "Aerial Domestication"
+obsolete_by   = "Skyknights"
+graphic       = "u.dragoons"
+graphic_alt   = "-"
+sound_move    = "m_dragoons"
+sound_move_alt = "m_generic"
+sound_fight   = "f_dragoons"
+sound_fight_alt = "f_generic"
+build_cost    = 40
+pop_cost      = 0
+attack        = 10
+defense       = 2
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 1
+uk_gold       = 0
+flags         = "IgZOC", "AirAttacker", "IgTer", "NoBuild", "Beast"
+targets       = "Air", "Helicopter", "Flier"
+roles         = "Hunter"
+helptext      = _("\
+Blood Drakes are aggressive\
+ relatives of the common Drake\
+ that live exclusively in the\
+ Blood Spires of the Wastes.\
+ Highly dangerous due to their\
+ tendency to attack in groups.\
 ")
 
 [unit_griffons]
@@ -3016,7 +3055,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "IgZOC", "AirAttacker", "IgTer", "Mounted"
+flags         = "IgZOC", "AirAttacker", "IgTer", "Beast"
 targets       = "Air", "Helicopter", "Flier"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 bonuses       =
@@ -3442,6 +3481,45 @@ Pyroscorpis are giant scorpions with an\
  innate resistance to fire.\
  They also possess a thick exoskeleton that\
  makes attacking them very difficult.\
+")
+
+[unit_cryoscorpis]
+name          = _("Cryoscorpis")
+class         = "Land"
+tech_req      = "Animal Husbandry"
+impr_req      = "Kth'ii Bestiary"
+obsolete_by   = "None"
+graphic       = "u.elephants"; Temporary
+graphic_alt   = "u.chariot"; Temporary
+sound_move    = "m_elephants"; Temporary
+sound_move_alt = "m_generic"; Temporary
+sound_fight   = "f_elephants"; Temporary
+sound_fight_alt = "f_generic"; Temporary
+build_cost    = 45
+pop_cost      = 0
+attack        = 3
+defense       = 5
+hitpoints     = 10
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Beast"
+bonuses       =
+   { "flag", "type", "value"
+     "Cryo", "DefenseMultiplier", 1
+   }
+roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Cryoscorpis are giant scorpions with an\
+ innate resistance to cold. They also\ 
+ possess a thick exoskeleton that makes\
+ attacking them very difficult.\
 ")
 
 [unit_wolf_pack]

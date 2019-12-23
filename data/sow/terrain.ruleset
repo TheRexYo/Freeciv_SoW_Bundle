@@ -638,6 +638,7 @@ flags                = "CanHaveRiver"
 property_foliage     = 50
 property_tropical    = 50
 property_wet         = 50
+property_green       = 75
 color.r              = 55
 color.g              = 156
 color.b              = 38
@@ -645,6 +646,57 @@ helptext             = _("\
 Jungles are densely overgrown, making agriculture somewhat\
  problematic. Big Land units may not move into jungle without\
  a road.\
+")
+
+
+[terrain_verdant]
+name                 = _("Verdant")
+graphic              = "jungle"
+graphic_alt          = "-"
+identifier           = "🌴"
+class                = "Land"
+movement_cost        = 2
+defense_bonus        = 25
+food                 = 1
+shield               = 1
+trade                = 0
+resources            = "Gems", "Fruit"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 1
+road_time            = 4
+irrigation_result    = "Jungle"
+irrigation_food_incr = 0
+irrigation_time      = 10
+mining_result        = "no"
+mining_shield_incr   = 0
+mining_time          = 0
+transform_result     = "Jungle"
+transform_time       = 24
+pillage_time         = 1
+clean_pollution_time = 3
+clean_fallout_time   = 3
+animal               = "None"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter", "Flier", "Amphibious", "Burrowing"
+flags                = "CanHaveRiver"
+property_foliage     = 50
+property_tropical    = 50
+property_wet         = 50
+property_green       = 100
+color.r              = 55
+color.g              = 156
+color.b              = 38
+helptext             = _("\
+Verdant terrain is terrain that has become overgrown\
+ due to exposure to Verdant energy.\
+"), _("\
+Units in this type of terrain regenerate 10% of their HP\
+ each turn, provided they don't move.\
 ")
 
 [terrain_mountains]
@@ -833,8 +885,6 @@ Tundra are broad, cold regions, fit for some agriculture and little\
  else.\
 ")
 
-
-
 [terrain_wastes]
 name                 = _("Wastes")
 graphic              = "desert"
@@ -844,7 +894,7 @@ class                = "Land"
 movement_cost        = 3
 defense_bonus        = 0
 food                 = 0
-shield               = 1
+shield               = 3
 trade                = 0
 resources            = "Oil", "Coal", "Iron", "Gold"
 road_food_incr_pct   = 0
@@ -856,7 +906,7 @@ irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 5
 mining_result        = "yes"
-mining_shield_incr   = 1
+mining_shield_incr   = 2
 mining_time          = 5
 transform_result     = "Desert"
 transform_time       = 100
@@ -871,17 +921,121 @@ cooler_drier_result  = "no"
 native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Flier", "Amphibious", "Burrowing"
 flags                = "Oil"
 property_dry         = 100
-property_tropical    = 20
-property_temperate   = 20
+property_temperate   = 50
+property_cold        = 50
+property_tropical    = 50
+property_frozen      = 50
 color.r              = 214
 color.g              = 100
 color.b              = 0
 helptext             = _("\
 Wastes are regions of extreme desolation, making agriculture and\
- trade very difficult. Units that remain in them take damage each\
- turn, with a few exceptions.\
+ trade very difficult.
+"), _("\
+Units in this type of terrain lose 3 HP\
+ each turn, unless they're in a city center.\
 ")
 
+[terrain_blood_spires]
+name                 = _("Blood Spires")
+graphic              = "desert"
+graphic_alt          = "-"
+identifier           = "b"
+class                = "Land"
+movement_cost        = 3
+defense_bonus        = 0
+food                 = 0
+shield               = 3
+trade                = 0
+resources            = "Oil", "Coal"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 100
+base_time            = 2
+road_time            = 4
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 5
+mining_result        = "yes"
+mining_shield_incr   = 2
+mining_time          = 5
+transform_result     = "Wastes"
+transform_time       = 100
+pillage_time         = 1
+clean_pollution_time = 10
+clean_fallout_time   = 10
+animal               = "Blood Drakes"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Flier", "Amphibious", "Burrowing"
+flags                = "Oil", "CanHaveRiver"
+property_dry         = 75
+property_cold        = 100
+color.r              = 255
+color.g              = 0
+color.b              = 0
+helptext             = _("\
+Blood Spires are a form of Wasteland\
+ terrain known for the strange, red liquid\
+ emmitted by the rocky spires that dominate\
+ the landscape. Sadly, this liquid is inedible,\ 
+ and thus cannot be used as a source of water.\
+"), _("\
+Units in this type of terrain lose 3 HP\
+ each turn, unless they're in a city center.\
+")
+
+[terrain_lava_flats]
+name                 = _("Lava Flats")
+graphic              = "desert"
+graphic_alt          = "-"
+identifier           = "l"
+class                = "Land"
+movement_cost        = 3
+defense_bonus        = 0
+food                 = 0
+shield               = 3
+trade                = 0
+resources            = "Iron", "Gold"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 100
+base_time            = 2
+road_time            = 4
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 5
+mining_result        = "yes"
+mining_shield_incr   = 2
+mining_time          = 5
+transform_result     = "Wastes"
+transform_time       = 100
+pillage_time         = 1
+clean_pollution_time = 10
+clean_fallout_time   = 10
+animal               = "Pyroscorpis"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Land", "Small Land", "Merchant", "Big Land", "Air", "Missile", "Helicopter", "Flier", "Amphibious", "Burrowing"
+flags                = "NoCities"
+property_dry         = 100
+property_tropical    = 100
+color.r              = 255
+color.g              = 0
+color.b              = 0
+helptext             = _("\
+Lava flats are a volcanic region\
+ of the Wastes that consists mainly\
+ of large quantities of lava and is thus\
+ highly dangerous for most living things.\
+"), _("\
+Units in this type of terrain lose 3 HP\
+ each turn, unless they're in a city center.\
+")
 
 ; The individual resource types, one per section.
 ; Roughly sorted by identifier.

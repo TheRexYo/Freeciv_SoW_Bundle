@@ -9,7 +9,8 @@ legend=_("The Skyfolk first set foot upon the Skyworld some 5000 BDR.
  strength remains uncontested on the Skyworld. The Skyfolk are the 
  only medieval empire to possess an aerial division in their 
  military, giving them a huge advantage over their foes.
-\n* 100% reduced population pollution.\
+\n* 25% reduced population pollution.\
+\n* Regenerate 25% HP while in verdant terrain instead of the usual 10%.\
 ")
 
 leaders = {
