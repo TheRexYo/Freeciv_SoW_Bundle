@@ -16,6 +16,9 @@ legend=_("Long ago, all of man lived as part of a single, unified\
  the Neph Empire began to diverge in purpose, until it finally\
  collapsed.\
 \n* No anarchy period after government change.\
+\n* When this nation's cities are captured,\
+ they inspire partisans, provided the requirements for\
+ the 'Partisan' unit are met.\
 ")
 leaders = {
  "name",                        "sex"

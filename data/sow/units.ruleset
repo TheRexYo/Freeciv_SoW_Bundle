@@ -694,7 +694,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer"
-roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild"
+roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest military unit.\
@@ -730,7 +730,7 @@ bonuses       =
      "WeakMelee", "DefenseDivider", 1
    }
 flags         = "Capturer"
-roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild"
+roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
@@ -766,7 +766,7 @@ bonuses       =
      "Mounted", "DefenseMultiplier", 1
    }
 flags         = "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest defensive unit.\
@@ -803,7 +803,7 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities\
  and capturing your enemies'.\
@@ -835,7 +835,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "WeakMelee"
-roles         = "DefendOk", "DefendOkStartUnit", "Hut"
+roles         = "DefendOk", "DefendOkStartUnit", "Hut", "Partisan"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value.\
@@ -871,10 +871,49 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Marines", "Capturer"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea", "Partisan"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
+")
+
+[unit_divine_legion]
+name          = _("Divine Legion")
+class         = "Land"
+tech_req      = "Iron Working"
+impr_req      = "Eye Of The Gods"
+obsolete_by   = "None"
+graphic       = "u.legion"
+graphic_alt   = "-"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 16
+defense       = 8
+hitpoints     = 40
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+	"WeakMelee", "DefenseDivider", 1
+   }
+flags         = "Marines", "Capturer"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+helptext      = _("\
+Divine Legions are godlike\
+ variants of the normal Legion\
+ that are almost unstoppable on\
+ the battlefield.\
 ")
 
 [unit_pikemen]
@@ -907,7 +946,7 @@ bonuses       =
    { "flag", "type", "value"
      "Mounted", "DefenseMultiplier", 1
    }
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 Equipped with long pikes, Pikemen replaces Phalanx\
  as the preferred city defender.\
@@ -940,7 +979,7 @@ uk_food       = 1
 uk_gold       = 1
 flags         = "Marines", "Capturer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "HutTech",
-                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
+                "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech", "Partisan"
 helptext      = _("\
 Musketeers are infantry equipped with early\
  firearms and replace Pikemen as the preferred\
@@ -973,7 +1012,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Marines", "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
  at defending your cities.\
@@ -1007,7 +1046,7 @@ uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "IgTer", "Capturer"
-roles         = "DefendOk", "DefendOkStartUnit"
+roles         = "DefendOk", "DefendOkStartUnit", "Partisan"
 helptext      = _("\
 Alpine Troops are highly mobile units as well as\
  excellent defenders.\
@@ -1084,7 +1123,7 @@ uk_gold       = 0
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
 flags         = "Fanatic", "AddToCity", "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit"
+roles         = "DefendGood", "DefendGoodStartUnit", "Partisan"
 helptext      = _("\
 Fanatics are warriors extremely devoted to a higher cause.\
 "), _("\
@@ -3448,8 +3487,7 @@ Seahorse Riders are mounted warriors that\
 name          = _("Pyroscorpis")
 class         = "Land"
 tech_req      = "Animal Husbandry"
-impr_req      = "Kth'ii Bestiary"
-obsolete_by   = "None"
+obsolete_by   = "Pyroscorpis Riders"
 graphic       = "u.elephants"; Temporary
 graphic_alt   = "u.chariot"; Temporary
 sound_move    = "m_elephants"; Temporary
@@ -3481,6 +3519,45 @@ Pyroscorpis are giant scorpions with an\
  innate resistance to fire.\
  They also possess a thick exoskeleton that\
  makes attacking them very difficult.\
+")
+
+[unit_pyroscorpis_riders]
+name          = _("Pyroscorpis Riders")
+class         = "Land"
+tech_req      = "Animal Husbandry"
+impr_req      = "Kth'ii Bestiary"
+obsolete_by   = "None"
+graphic       = "u.elephants"; Temporary
+graphic_alt   = "u.chariot"; Temporary
+sound_move    = "m_elephants"; Temporary
+sound_move_alt = "m_generic"; Temporary
+sound_fight   = "f_elephants"; Temporary
+sound_fight_alt = "f_generic"; Temporary
+build_cost    = 60
+pop_cost      = 0
+attack        = 4
+defense       = 7
+hitpoints     = 15
+firepower     = 1
+move_rate     = 2
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+flags         = "Beast", "Capturer"
+bonuses       =
+   { "flag", "type", "value"
+     "Pyro", "DefenseMultiplier", 1
+   }
+roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+When mounted, Pyroscorpis gain the\
+ benefits of increased combat prowess\
+ and the ability to capture enemies rather\
+ than kill them.\
 ")
 
 [unit_cryoscorpis]

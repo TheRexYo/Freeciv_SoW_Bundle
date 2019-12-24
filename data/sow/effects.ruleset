@@ -3029,7 +3029,112 @@ reqs    =
     { "type", "name", "range"
       "Building", "Temple Desolus", "Player"
     }
+
+[effect_eye_of_the_gods_1]
+type    = "Output_Bonus"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Eye Of The Gods", "Player"
+    }
 	
+[effect_eye_of_the_gods_2]
+type    = "Move_Bonus"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Building", "Eye Of The Gods", "Player"
+    }
+
+[effect_eye_of_the_gods_3]
+type    = "Defend_Bonus"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Eye Of The Gods", "Player"
+    }
+	
+[effect_sun_alars_college_of_war_1]
+type    = "Veteran_Build"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Sun Alar's College Of War", "Player"
+    }
+	
+[effect_sun_alars_college_of_war_2]
+type    = "Veteran_Combat"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "Sun Alar's College Of War", "Player"
+    }
+
+[effect_sun_alars_college_of_war_3]
+type    = "Upgrade_Unit"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Building", "Sun Alar's College Of War", "Player"
+    }
+
+[effect_the_seers_stone_1]
+type    = "Reveal_Cities"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "Player"
+    }
+	
+[effect_the_seers_stone_2]
+type    = "Reveal_Map"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "Player"
+    }
+
+[effect_the_seers_stone_3]
+type    = "City_Vision_Radius_Sq"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "Player"
+    }
+	
+[effect_the_seers_stone_4]
+type    = "Unit_Vision_Radius_Sq"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "Player"
+    }
+	
+[effect_the_seers_stone_5]
+type    = "City_Vision_Radius_Sq"
+value   = 10
+reqs    =
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "City"
+    }
+	
+[effect_sun_alars_college_of_war_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range"
+      "Building", "Sun Alar's College Of War", "City"
+    }
+
+[effect_the_seers_stone_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "The Seer's Stone", "City"
+    }
+
+
 [effect_temple_verde_culture]
 type    = "History"
 value	= 2
@@ -3046,6 +3151,14 @@ reqs	=
       "Building", "Temple Desolus", "City"
     }
 
+[effect_eye_of_the_gods_culture]
+type    = "History"
+value	= 4
+reqs	=
+    { "type", "name", "range"
+      "Building", "Eye Of The Gods", "City"
+    }
+	
 [effect_calendar_base]
 type    = "Turn_Years"
 value   = 50
@@ -3490,6 +3603,14 @@ reqs    =
     { "type", "name", "range"
       "Nation", "Imperian", "Player"
     }
+	
+[effect_imperian_3]
+type    = "Size_Adj"
+value   = 2
+reqs    =
+    { "type", "name", "range"
+      "Nation", "Imperian", "Player"
+    }
 
 [effect_neph_1]
 type    = "No_Anarchy"
@@ -3505,18 +3626,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Nation", "Neph", "Player", TRUE
-      "Nation", "Kth", "World", TRUE
     }
 
-
-[effect_neph_3]
-type    = "No_Unhappy"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Nation", "Neph", "Player", TRUE
-      "Nation", "Kth", "World", FALSE
-    }
 
 [effect_aetherian]
 type    = "Rapture_Grow"

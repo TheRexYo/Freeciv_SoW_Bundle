@@ -221,6 +221,14 @@ reqs	=
     { "type", "name", "range"
       "Gov", "Republic", "Player"
     }
+	
+[musicstyle_democracy]
+music_peaceful     = "music_republic_peace"
+music_combat       = "music_republic_combat"
+reqs	=
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+    }
 
 [musicstyle_horde]
 music_peaceful     = "music_horde_peace"

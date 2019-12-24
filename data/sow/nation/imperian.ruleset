@@ -3,9 +3,12 @@
 name=_("Imperian")
 plural=_("?plural:Imperians")
 groups="Ancient", "Medieval", "Early Modern", "Erath", "Core"
-legend=_("The Imperians are an old people. Ever since the Neph empire collapsed, they 
-vowed to take back the rightful glory of their predecessors, even if it took
-them an eternity.")
+legend=_("The Imperians are an old people. Ever since the Neph empire collapsed, they
+ vowed to take back the rightful glory of their predecessors, even if it took
+ them an eternity.
+\n* Citizens do not get unhappy in a larger empire.
+\n* Maximum city size is increased by 2.
+")
 
 leaders = {
  "name",                        "sex"

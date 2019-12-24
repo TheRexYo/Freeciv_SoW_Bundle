@@ -14,7 +14,117 @@
 -- file called 'default.lua'. The one loaded if your ruleset
 -- does not provide an override is default/default.lua.
 
+endtimes = false
+alerted = false
+gamestarted = false
+messages = {}
+-- Start of Messages --
+messages["Aetherian"] = "\
+The Aetherians form a balanced nation\
+ that can grow rapidly due to its\
+ ability to 'Rapture Grow'. This means\
+ that all cities of size three or larger\
+ grow by one citizen per turn, provided it\
+ has no unhappy citizens and at least 50% of\
+ its citizens are happy rather than content.\
+ \n*Tip: Try to keep your citizens as happy as\
+ possible. This will ensure maximum growth.\
+"
+messages["Mesyptian"] = "\
+The Mesyptians form a construction-oriented nation\
+ designed to build wonders at maximum efficiency.\
+ They utilize special 'slave' units to speed up\
+ wonders being built, and they start with the\
+ masonry technology, allowing them to build\
+ the Great Wonder 'Nephaliths' straight off the bat.\
+ \n*Tip: Slave units will not retaliate if attacked,\
+ meaning that they can be captured despite their\
+ conventional equivalents lacking such a weakness.\
+ Be careful!\
+"
+messages["Skyfolk"] = "\
+The Skyfolk are a military-oriented nation\
+ that is especially useful for new players\
+ due to its reduced pollution. Additionally,\
+ this nation possesses the ability to produce\
+ advanced aerial units once it researches the\
+ requisite technologies to craft them and builds\
+ its signature wonder - the 'Chameran Aviation Academy'.\
+ \n*Tip: The Skyfolk are especially effective\
+ in Verdant terrain, where they regenerate 25 HP\
+ per turn instead of the standard 10. Use this to\
+ your advantage when fighting a war!\
+"
+messages["Wasteraiders"] = "\
+The Wasteraiders form a military-oriented nation\
+ that is most useful to experienced players due to\
+ its increased production at the cost of pollution.\
+ Additionally, this nation possesses the ability to\
+ produce advanced artillery units once it researches the\
+ requisite technologies to craft them and builds\
+ its signature wonder - the 'Ensdaelian Grand Forge'.\
+ \n*Tip: The Wasteraiders are especially effective\
+ in Wasteland terrain, where they are immune to the\
+ HP-draining effects of those areas. This allows them\
+ to safely travel where others cannot.\
+"
+messages["Kth'ii"] = "\
+The Kth'ii form a military-oriented nation\
+ that is distinctly known for its cavalry.\
+ The nation starts with the 'Animal Husbandry'\
+ technology, allowing it to build many animal units\
+ right off the bat.\
+ \n*Tip: The Kth'ii are especially effective\
+ in Lava terrain, where they are immune to the\
+ HP-draining effects of those areas. This allows them\
+ to safely travel where others cannot.\
+"
 
+messages["Noraskan"] = "\
+The Noraskans form a military-oriented nation\
+ that is distinctly known for its naval power.\
+ The nation starts with the 'Seafaring' technology,\
+ allowing it to build naval units right off the bat.\
+ \n*Tip: The Noraskan sea units are easily some of the\
+ most dangerous naval units in the early-game. Take\
+ advantage of their power before they become obsolete!\
+"
+
+messages["Imperian"] = "\
+The Imperians form an expansion-oriented nation\
+ that is best suited to rapidly settling as much\
+ terrain as possible. There is no empire size penalty\
+ for them, and their cities can grow up to two sizes\
+ larger than normal. This makes them well-suited for\
+ colonization of all types.\
+ \n*Tip: The Imperians start with the 'Despotism' government,\
+ negating the need to start a revolution should you decide to\
+ be a dictator.\
+"
+
+messages["Rhonan"] = "\
+The Rhonans form a balanced nation that is best suited\
+ for all purposes. In particular, the nation starts off\
+ with the technologies 'Monarchy' and 'The Republic'.\
+ This allows them to gain an early-game edge by choosing\
+ the government that best suits their needs.\
+ \n*Tip: The Imperians start with the 'Monarchy' government,\
+ negating the need to start a revolution should you decide to\
+ be a monarch.\
+"
+
+messages["Neph"] = "\
+The Neph form a balanced nation that is best suited\
+ for all purposes. It is especially versatile thanks to\
+ its ability to freely switch governments. This allows them\
+ to obtain whatever benefits they need at any time they deem\
+ it necessary. This is especially useful once multiple governments\
+ have been unlocked.\
+ \n*Tip: When Neph cities are captured, they inspire partisans to\
+ defend them, provided the requirements for the 'Partisan' unit are met.\
+ Use this to your advantage when fighting a war.\
+"
+--  End of Messages  --
 -- Place Ruins at the location of the destroyed city.
 function city_destroyed_callback(city, loser, destroyer)
   city.tile:create_extra("Ruins", NIL)
@@ -35,10 +145,22 @@ end
 
 signal.connect("building_built", "building_built_callback")
 
+function initialize(player)
+	local nation = player.nation
+	local nationname = nation:rule_name()
+	local message = messages[nationname]
+	local basemessage = "You are playing as the nation '" .. nationname .. "'."
+	if message ~= nil then
+		notify.player(player,basemessage .. "\n" .. message)
+	end
+end
+
 function endtimes_callback(turn, year)
 	local targets = {}
-    local endtimes = false
 	for player in players_iterate() do
+	  if turn == 1 then
+		initialize(player)
+	  end
 	  local check = player:has_wonder(find.building_type("Eye Of The Gods"))
 	  if check then
 		endtimes = true
@@ -47,9 +169,10 @@ function endtimes_callback(turn, year)
 	if endtimes == true then
 		if year >= 1000 then
 			local alive = find.nation_type("Exodii")
-			if alive == nil then
+			if alive == nil and alerted == false then
 				notify.all("The endtimes are upon us...")
 				local exodii = edit.create_player("Exodii", "Exodii", nil)
+				alerted = true
 			else
 			
 			end

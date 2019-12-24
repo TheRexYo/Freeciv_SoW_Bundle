@@ -5,7 +5,7 @@ plural=_("?plural:Aetherians")
 groups="Ancient", "Erath", "Extended"
 legend=_("The Aetherians are a people of extremes. Whether a force of extreme good or evil,
 they never walk the middle line.
-\n* Can rapture grow regardless of government.\
+\n* Can rapture grow regardless of government.
 ")
 
 
