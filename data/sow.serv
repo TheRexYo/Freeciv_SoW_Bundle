@@ -2,3 +2,4 @@
 #
 
 rulesetdir sow
+set topology "WRAPX|WRAPY|ISO"

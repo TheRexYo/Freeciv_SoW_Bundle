@@ -32,18 +32,14 @@ flag="england"
 flag_alt = "united_kingdom"
 style = "European"
 
-init_techs=""
-init_buildings=""
-init_units=""
+init_techs="Exodii Tech"
+init_buildings="Exodii Cloning Facility", "Exodii Production Facility"
+init_units="Exodii Drone"
 civilwar_nations = ""
 is_playable = false
 cities =
- "Alor",
- "Nerai",
- "Phorl",
- "Dehsk",
- "Fyrin"
+ "Exon"
 
 trait_expansionist = 0
 trait_trader       = 0
-trait_aggressive   = 0
+trait_aggressive   = 10000; Temporary (until declaring war via scripts is enabled).

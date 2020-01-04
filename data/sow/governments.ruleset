@@ -391,6 +391,8 @@ _("\
  (half as fast with knowledge of The Corporation).\n\
 * Base production waste is 5%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\
+* Can 'Rapture Grow' in cities with size 3 or greater,\
+ allowing growth when citizens are happy.\
 ")
 
 ;------------------------------------------------------------------------
@@ -428,6 +430,8 @@ _("\
 * Base production waste is 25%. This increases with distance from the\
  capital (half as fast with knowledge of Trade).\n\
 * Has a senate that may prevent declaration of war.\
+* Can 'Rapture Grow' in cities with size 5 or greater,\
+ allowing growth when citizens are happy.\
 ")
 
 

@@ -1,0 +1,116 @@
+-------------------
+
+Error occurred on Friday, January 3, 2020 at 18:28:41.
+
+freeciv-server.exe caused an Access Violation at location 00530F68 in module freeciv-server.exe Reading from location 000005B4.
+
+Registers:
+eax=00000038 ebx=00783b80 ecx=064ad8c0 edx=00000004 esi=00000000 edi=01a80e6c
+eip=00530f68 esp=017efd60 ebp=06589428 iopl=0         nv up ei ng nz ac po cy
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010297
+
+AddrPC   Params
+00530F68 064AD8C0 02C60000 00000000  freeciv-server.exe! ??   [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/common/../../../../common/improvement.c @ 788]
+005B32E7 00000000 00783B80 06589428  freeciv-server.exe!player_city_by_number  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/common/../../../../common/player.c @ 1089]
+0053144B 064AD8C0 00000003 017EFFCC  freeciv-server.exe!city_from_great_wonder  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/common/../../../../common/improvement.c @ 882]
+005B1952 00783B80 064AD8C0 00000015  freeciv-server.exe!player_owns_city  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/common/../../../../common/player.c @ 234]
+004B5882 06589428 00000002 00000000  freeciv-server.exe!calc_civ_score  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/server/../../../../server/score.c @ 327]
+0040B205 02C6B3B0 006318BF 00631350  freeciv-server.exe!srv_main  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/server/../../../../server/srv_main.c @ 1076]
+00621883 017EFF0C 0030B000 0030B000  freeciv-server.exe!main  [X:/projects/freeciv/gnuwin32-2018-05-11/home/Christian/freeciv-2.6.1/win32/installer/build-sdl/server/../../../../server/civserver.c @ 476]
+00401285 0030B000 13F6A6F1 00000000  freeciv-server.exe!_Jv_RegisterClasses
+778A7B74 FFFFFFFF 778C8EFC 00000000  ntdll.dll!RtlGetAppContainerNamedObjectPath
+778A7B44 004012E0 0030B000 00000000  ntdll.dll!RtlGetAppContainerNamedObjectPath
+
+freeciv-server.exe
+ntdll.dll   	6.2.18362.387
+KERNEL32.DLL	6.2.18362.329
+KERNELBASE.dll	6.2.18362.535
+ADVAPI32.DLL	6.2.18362.329
+msvcrt.dll  	7.0.18362.1
+sechost.dll 	6.2.18362.267
+RPCRT4.dll  	6.2.18362.476
+SspiCli.dll 	6.2.18362.1
+CRYPTBASE.dll	6.2.18362.1
+bcryptPrimitives.dll	6.2.18362.295
+SHELL32.DLL 	6.2.18362.535
+ucrtbase.dll	6.2.18362.387
+libcurl.dll 	7.40.0.0
+libbz2-2.dll
+cfgmgr32.dll	6.2.18362.387
+libiconv-2.dll	1.13.1.0
+USER32.dll  	6.2.18362.535
+win32u.dll  	6.2.18362.535
+shcore.dll  	6.2.18362.1
+libintl-8.dll	0.18.2.0
+liblzma-5.dll	5.0.7.0
+GDI32.dll   	6.2.18362.1
+combase.dll 	6.2.18362.449
+libMagickWand-6.Q16-1.dll
+gdi32full.dll	6.2.18362.535
+windows.storage.dll	6.2.18362.535
+msvcp_win.dll	6.2.18362.387
+profapi.dll 	6.2.18362.1
+pthreadGC2.dll	2.8.0.0
+wldap32.dll 	6.2.18362.449
+powrprof.dll	6.2.18362.1
+WS2_32.dll  	6.2.18362.387
+UMPDC.dll
+libgcc_s_dw2-1.dll
+shlwapi.dll 	6.2.18362.1
+libMagickCore-6.Q16-1.dll
+kernel.appcore.dll	6.2.18362.1
+cryptsp.dll 	6.2.18362.1
+WINMM.DLL   	6.2.18362.1
+libidn-11.dll
+SSLEAY32.dll	1.0.2.8
+WSOCK32.DLL 	6.2.18362.1
+zlib1.dll   	1.2.8.0
+libfontconfig-1.dll
+freetype6.dll
+libgobject-2.0-0.dll	2.36.1.0
+libpangocairo-1.0-0.dll	1.32.6.0
+libpango-1.0-0.dll	1.32.6.0
+libpthread-2.dll	2.8.0.0
+libpng14-14.dll
+libsqlite3-0.dll
+winmmbase.dll	6.2.18362.1
+libxml2-2.dll
+libglib-2.0-0.dll	2.36.1.0
+libfreetype-6.dll
+OLE32.dll   	6.2.18362.113
+libffi-6.dll
+libgmodule-2.0-0.dll	2.36.1.0
+LIBEAY32.dll	1.0.2.8
+libpangowin32-1.0-0.dll	1.32.6.0
+libcairo-2.dll
+USP10.DLL   	6.2.18362.476
+MSIMG32.DLL 	6.2.18362.175
+libpng15-15.dll
+libpixman-1-0.dll
+IMM32.DLL   	6.2.18362.387
+exchndl.dll 	0.8.1.0
+PSAPI.DLL   	6.2.18362.1
+mgwhelp.dll 	0.8.1.0
+VERSION.dll 	6.2.18362.1
+dbghelp.dll 	6.2.18362.1
+dbgcore.DLL 	6.2.18362.1
+mswsock.dll 	6.2.18362.1
+DNSAPI.dll  	6.2.18362.267
+NSI.dll     	6.2.18362.449
+IPHLPAPI.DLL	6.2.18362.1
+fwpuclnt.dll	6.2.18362.113
+bcrypt.dll  	6.2.18362.267
+rasadhlp.dll	6.2.18362.1
+uxtheme.dll 	6.2.18362.449
+OLEAUT32.dll	6.2.18362.535
+clbcatq.dll 	2001.12.10941.16384
+propsys.dll 	7.0.18362.267
+napinsp.dll 	6.2.18362.1
+pnrpnsp.dll 	6.2.18362.1
+winrnr.dll  	6.2.18362.1
+NLAapi.dll  	6.2.18362.1
+wshbth.dll  	6.2.18362.1
+
+Windows 6.2.9200
+DrMingw 0.8.1
+

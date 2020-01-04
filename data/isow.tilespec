@@ -81,8 +81,8 @@ city_productions_font_size = 8
 
 ; These are special because they get freed and reloaded
 ; as required:
-main_intro_file    = "misc/intro"
-minimap_intro_file = "misc/radar"
+main_intro_file    = "sowgfx/intro"
+minimap_intro_file = "sowgfx/radar"
 
 ; Below, the graphics spec files; must be somewhere (anywhere) in 
 ; the data path. Order may be important for color allocation on 
@@ -100,34 +100,36 @@ files =
   "isow/upkeep.spec",
   "isow/activities.spec",
   "isow/fog.spec",
-  "misc/small.spec",
-  "misc/events.spec",
-  "misc/governments.spec",
-  "misc/specialists.spec",
+  "sowgfx/small.spec",
+  "sowgfx/events.spec",
+  "sowgfx/governments.spec",
+  "sowgfx/specialists.spec",
   "isow/units.spec",
   "isow/veterancy.spec",
-  "misc/flags-large.spec",
-  "misc/buildings-large.spec",
-  "misc/wonders-large.spec",
-  "misc/space.spec",
-  "misc/techs.spec",
-  "misc/treaty.spec",
+  "sowgfx/shields-large.spec",
+  "sowgfx/flags-large_old.spec",
+  "sowgfx/buildings-large.spec",
+  "sowgfx/wonders-large.spec",
+  "sowgfx/space.spec",
+  "sowgfx/techs.spec",
+  "sowgfx/treaty.spec",
   "isow/nuke.spec",
   "isow/explosions.spec",
   "isow/cities.spec",
   "isow/bases.spec",
   "isow/select.spec",
   "isow/grid.spec",
-  "misc/cursors.spec",
-  "misc/overlays.spec",
-  "misc/citybar.spec",
-  "misc/shields-large.spec",
-  "misc/editor.spec",
-  "misc/icons.spec"
+  "sowgfx/cursors.spec",
+  "sowgfx/overlays.spec",
+  "sowgfx/citybar.spec",
+  "sowgfx/shields-large.spec",
+  "sowgfx/shields-large_old.spec",
+  "sowgfx/editor.spec",
+  "sowgfx/icons.spec"
 
 
 ; Include color definitions
-*include "misc/colors.tilespec"
+*include "sowgfx/colors.tilespec"
 
 ; Terrain info - see README.graphics
 

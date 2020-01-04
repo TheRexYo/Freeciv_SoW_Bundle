@@ -451,7 +451,7 @@ class         = "Small Land"
 tech_req      = "None"
 obsolete_by   = "None"
 graphic       = "u.settlers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_settlers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_settlers"
@@ -628,7 +628,7 @@ class         = "Small Land"
 tech_req      = "Explosives"
 obsolete_by   = "None"
 graphic       = "u.engineers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_engineers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_engineers"
@@ -674,7 +674,7 @@ class         = "Land"
 tech_req      = "None"
 obsolete_by   = "Musketeers"
 graphic       = "u.warriors"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
@@ -706,7 +706,7 @@ class         = "Land"
 tech_req      = "None"
 obsolete_by   = "Musketeers"
 graphic       = "u.warriors"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
@@ -742,7 +742,7 @@ class         = "Land"
 tech_req      = "None"
 obsolete_by   = "Phalanx"
 graphic       = "u.phalanx"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
@@ -778,7 +778,7 @@ class         = "Land"
 tech_req      = "Bronze Working"
 obsolete_by   = "Pikemen"
 graphic       = "u.phalanx"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_phalanx"
 sound_move_alt = "m_generic"
 sound_fight   = "f_phalanx"
@@ -800,9 +800,47 @@ uk_gold       = 1
 bonuses       =
    { "flag", "type", "value"
      "Mounted", "DefenseMultiplier", 1
-	"WeakMelee", "DefenseDivider", 1
+	 "WeakMelee", "DefenseDivider", 1
    }
 flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
+helptext      = _("\
+The Phalanx is armored infantry, suitable for defending your cities\
+ and capturing your enemies'.\
+")
+
+[unit_arcanian_phalanx]
+name          = _("Arcanian Phalanx")
+class         = "Land"
+tech_req      = "Bronze Working"
+impr_req      = "Arcanian Forest"
+obsolete_by   = "Pikemen"
+graphic       = "u.phalanx"
+graphic_alt   = "u.generic"
+sound_move    = "m_phalanx"
+sound_move_alt = "m_generic"
+sound_fight   = "f_phalanx"
+sound_fight_alt = "f_generic"
+build_cost    = 20
+pop_cost      = 0
+attack        = 2
+defense       = 2
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Mounted", "DefenseMultiplier", 1
+	 "WeakMelee", "DefenseDivider", 1
+   }
+flags         = "Capturer", "IgTer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities\
@@ -815,7 +853,7 @@ class         = "Land"
 tech_req      = "Warrior Code"
 obsolete_by   = "Musketeers"
 graphic       = "u.archers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
@@ -847,7 +885,7 @@ class         = "Land"
 tech_req      = "Iron Working"
 obsolete_by   = "Musketeers"
 graphic       = "u.legion"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
@@ -884,7 +922,7 @@ tech_req      = "Iron Working"
 impr_req      = "Eye Of The Gods"
 obsolete_by   = "None"
 graphic       = "u.legion"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_legion"
 sound_move_alt = "m_generic"
 sound_fight   = "f_legion"
@@ -922,7 +960,7 @@ class         = "Land"
 tech_req      = "Feudalism"
 obsolete_by   = "Musketeers"
 graphic       = "u.pikemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_pikemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_pikemen"
@@ -958,7 +996,7 @@ class         = "Land"
 tech_req      = "Gunpowder"
 obsolete_by   = "Riflemen"
 graphic       = "u.musketeers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_musketeers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_musketeers"
@@ -992,7 +1030,7 @@ class         = "Land"
 tech_req      = "Conscription"
 obsolete_by   = "Marines"
 graphic       = "u.riflemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_riflemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_riflemen"
@@ -1024,7 +1062,7 @@ class         = "Land"
 tech_req      = "Tactics"
 obsolete_by   = "None"
 graphic       = "u.alpine_troops"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_alpine_troops"
 sound_move_alt = "m_generic"
 sound_fight   = "f_alpine_troops"
@@ -1058,7 +1096,7 @@ class         = "Land"
 tech_req      = "Guerilla Warfare"
 obsolete_by   = "None"
 graphic       = "u.partisan"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_partisan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_partisan"
@@ -1101,7 +1139,7 @@ tech_req      = "Guerilla Warfare"
 gov_req       = "Fundamentalism"
 obsolete_by   = "None"
 graphic       = "u.fanatics"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_fanatics"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fanatics"
@@ -1139,7 +1177,7 @@ tech_req      = "None"
 gov_req       = "Horde"
 obsolete_by   = "None"
 graphic       = "u.warriors"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_warriors"
 sound_move_alt = "m_generic"
 sound_fight   = "f_warriors"
@@ -1175,7 +1213,7 @@ tech_req      = "Horseback Riding"
 gov_req       = "Horde"
 obsolete_by   = "None"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -1211,7 +1249,7 @@ class         = "Land"
 tech_req      = "Amphibious Warfare"
 obsolete_by   = "None"
 graphic       = "u.marines"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_marines"
 sound_move_alt = "m_generic"
 sound_fight   = "f_marines"
@@ -1244,7 +1282,7 @@ class         = "Land"
 tech_req      = "Combined Arms"
 obsolete_by   = "None"
 graphic       = "u.paratroopers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_paratroopers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_paratroopers"
@@ -1285,7 +1323,7 @@ class         = "Big Land"
 tech_req      = "Labor Union"
 obsolete_by   = "None"
 graphic       = "u.mech_inf"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_mech_inf"
 sound_move_alt = "m_generic"
 sound_fight   = "f_mech_inf"
@@ -1320,7 +1358,7 @@ class         = "Land"
 tech_req      = "Horseback Riding"
 obsolete_by   = "Knights"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -1353,7 +1391,7 @@ class         = "Big Land"
 tech_req      = "The Wheel"
 obsolete_by   = "Dragoons"
 graphic       = "u.chariot"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_chariot"
 sound_move_alt = "m_generic"
 sound_fight   = "f_chariot"
@@ -1389,7 +1427,7 @@ class         = "Land"
 tech_req      = "Animal Husbandry"
 obsolete_by   = "Engineers"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -1435,7 +1473,7 @@ tech_req      = "Animal Husbandry"
 impr_req      = "Mesyptian Slave Hut"
 obsolete_by   = "Engineers"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -1609,7 +1647,7 @@ class         = "Land"
 tech_req      = "Chivalry"
 obsolete_by   = "Dragoons"
 graphic       = "u.knights"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_knights"
 sound_move_alt = "m_generic"
 sound_fight   = "f_knights"
@@ -1641,7 +1679,7 @@ class         = "Land"
 tech_req      = "Leadership"
 obsolete_by   = "Cavalry"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -1672,7 +1710,7 @@ class         = "Land"
 tech_req      = "Tactics"
 obsolete_by   = "Armor"
 graphic       = "u.cavalry"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_cavalry"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cavalry"
@@ -1703,7 +1741,7 @@ class         = "Big Land"
 tech_req      = "Mobile Warfare"
 obsolete_by   = "None"
 graphic       = "u.armor"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_armor"
 sound_move_alt = "m_generic"
 sound_fight   = "f_armor"
@@ -1738,7 +1776,7 @@ class         = "Big Land"
 tech_req      = "Mathematics"
 obsolete_by   = "Cannon"
 graphic       = "u.catapult"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_catapult"
 sound_move_alt = "m_generic"
 sound_fight   = "f_catapult"
@@ -1776,7 +1814,7 @@ class         = "Big Land"
 tech_req      = "Metallurgy"
 obsolete_by   = "Artillery"
 graphic       = "u.cannon"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_cannon"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cannon"
@@ -1810,7 +1848,7 @@ class         = "Big Land"
 tech_req      = "Machine Tools"
 obsolete_by   = "Howitzer"
 graphic       = "u.artillery"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
@@ -1843,7 +1881,7 @@ class         = "Big Land"
 tech_req      = "Robotics"
 obsolete_by   = "None"
 graphic       = "u.howitzer"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_howitzer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_howitzer"
@@ -1876,7 +1914,7 @@ class         = "Air"
 tech_req      = "Flight"
 obsolete_by   = "Stealth Fighter"
 graphic       = "u.fighter"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_fighter"
@@ -1914,7 +1952,7 @@ class         = "Air"
 tech_req      = "Advanced Flight"
 obsolete_by   = "Stealth Bomber"
 graphic       = "u.bomber"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_bomber"
@@ -1956,7 +1994,7 @@ class         = "Helicopter"
 tech_req      = "Combined Arms"
 obsolete_by   = "None"
 graphic       = "u.helicopter"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_helicopter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_helicopter"
@@ -2000,7 +2038,7 @@ class         = "Air"
 tech_req      = "Stealth"
 obsolete_by   = "None"
 graphic       = "u.stealth_fighter"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_stealth_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_fighter"
@@ -2033,7 +2071,7 @@ class         = "Air"
 tech_req      = "Stealth"
 obsolete_by   = "None"
 graphic       = "u.stealth_bomber"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_stealth_bomber"
 sound_move_alt = "m_generic"
 sound_fight   = "f_stealth_bomber"
@@ -2066,7 +2104,7 @@ class         = "Trireme"
 tech_req      = "Map Making"
 obsolete_by   = "Transport"
 graphic       = "u.trireme"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_trireme"
 sound_move_alt = "m_generic"
 sound_fight   = "f_trireme"
@@ -2101,7 +2139,7 @@ class         = "Sea"
 tech_req      = "Magnetism"
 obsolete_by   = "Galleon"
 graphic       = "u.caravel"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_caravel"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravel"
@@ -2134,7 +2172,7 @@ class         = "Sea"
 tech_req      = "Navigation"
 obsolete_by   = "Transport"
 graphic       = "u.galleon"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_galleon"
 sound_move_alt = "m_generic"
 sound_fight   = "f_galleon"
@@ -2168,7 +2206,7 @@ class         = "Sea"
 tech_req      = "Navigation"
 obsolete_by   = "Ironclad"
 graphic       = "u.frigate"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
@@ -2200,7 +2238,7 @@ class         = "Sea"
 tech_req      = "Steam Engine"
 obsolete_by   = "Destroyer"
 graphic       = "u.ironclad"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_ironclad"
 sound_move_alt = "m_generic"
 sound_fight   = "f_ironclad"
@@ -2232,7 +2270,7 @@ class         = "Sea"
 tech_req      = "Engineering"
 obsolete_by   = "None"
 graphic       = "u.destroyer"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_destroyer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_destroyer"
@@ -2271,7 +2309,7 @@ class         = "Sea"
 tech_req      = "Steel"
 obsolete_by   = "AEGIS Cruiser"
 graphic       = "u.cruiser"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruiser"
@@ -2302,7 +2340,7 @@ class         = "Sea"
 tech_req      = "Rocketry"
 obsolete_by   = "None"
 graphic       = "u.aegis_cruiser"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_aegis_cruiser"
 sound_move_alt = "m_generic"
 sound_fight   = "f_aegis_cruiser"
@@ -2338,7 +2376,7 @@ class         = "Sea"
 tech_req      = "Mass Production"
 obsolete_by   = "None"
 graphic       = "u.battleship"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_battleship"
 sound_move_alt = "m_generic"
 sound_fight   = "f_battleship"
@@ -2370,7 +2408,7 @@ class         = "Sea"
 tech_req      = "Combustion"
 obsolete_by   = "None"
 graphic       = "u.submarine"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_submarine"
 sound_move_alt = "m_generic"
 sound_fight   = "f_submarine"
@@ -2404,7 +2442,7 @@ class         = "Sea"
 tech_req      = "Advanced Flight"
 obsolete_by   = "None"
 graphic       = "u.carrier"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_carrier"
 sound_move_alt = "m_generic"
 sound_fight   = "f_carrier"
@@ -2444,7 +2482,7 @@ class         = "Sea"
 tech_req      = "Engineering"
 obsolete_by   = "None"
 graphic       = "u.transport"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_transport"
 sound_move_alt = "m_generic"
 sound_fight   = "f_transport"
@@ -2488,7 +2526,7 @@ class         = "Missile"
 tech_req      = "Rocketry"
 obsolete_by   = "None"
 graphic       = "u.cruise_missile"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_cruise_missile"
 sound_move_alt = "m_generic"
 sound_fight   = "f_cruise_missile"
@@ -2524,7 +2562,7 @@ class         = "Missile"
 tech_req      = "Nuclear Fission"
 obsolete_by   = "None"
 graphic       = "u.nuclear"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
@@ -2582,7 +2620,7 @@ class         = "Small Land"
 tech_req      = "Alphabet"
 obsolete_by   = "Spy"
 graphic       = "u.diplomat"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_diplomat"
 sound_move_alt = "m_generic"
 sound_fight   = "f_diplomat"
@@ -2693,7 +2731,7 @@ class         = "Small Land"
 tech_req      = "Espionage"
 obsolete_by   = "None"
 graphic       = "u.spy"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_spy"
 sound_move_alt = "m_generic"
 sound_fight   = "f_spy"
@@ -2762,7 +2800,7 @@ class         = "Merchant"
 tech_req      = "Trade"
 obsolete_by   = "Freight"
 graphic       = "u.caravan"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_caravan"
 sound_move_alt = "m_generic"
 sound_fight   = "f_caravan"
@@ -2810,7 +2848,7 @@ class         = "Merchant"
 tech_req      = "The Corporation"
 obsolete_by   = "None"
 graphic       = "u.freight"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_freight"
 sound_move_alt = "m_generic"
 sound_fight   = "f_freight"
@@ -2842,7 +2880,7 @@ class         = "Small Land"
 tech_req      = "Seafaring"
 obsolete_by   = "None"
 graphic       = "u.explorer"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_explorer"
 sound_move_alt = "m_generic"
 sound_fight   = "f_explorer"
@@ -2996,13 +3034,50 @@ advanced radar that can determine the location of enemy units over a \
 wide area.\
 ")
 
+;TODO: Sort new units with old ones so the old ones are still built.
+[unit_skyship]
+name          = _("Skyship")
+class         = "Air"
+tech_req      = "Arcane Forging"
+obsolete_by   = "None"
+graphic       = "u.galleon"
+graphic_alt   = "u.generic"
+sound_move    = "m_fighter"
+sound_move_alt = "m_generic"
+sound_fight   = "f_galleon"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 3
+defense       = 1
+hitpoints     = 20
+firepower     = 1
+move_rate     = 3
+vision_radius_sq = 6
+transport_cap = 3
+fuel          = 1
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 2
+flags         = "IgZOC", "AirAttacker", "IgTer"
+targets       = "Air", "Helicopter", "Flier"
+roles         = "AttackFastStartUnit", "Hunter"
+helptext      = _("\
+Skyships are aerial ships that\
+ possess the unique effect of\
+ being able to transport units\
+ over all types of terrain thanks\
+ to their ability to fly.\
+")
+
 [unit_drakes]
 name          = _("Drakes")
 class         = "Flier"
 tech_req      = "Aerial Domestication"
 obsolete_by   = "Skyknights"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3038,7 +3113,7 @@ class         = "Flier"
 tech_req      = "Aerial Domestication"
 obsolete_by   = "Skyknights"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3075,7 +3150,7 @@ class         = "Flier"
 tech_req      = "Aerial Domestication"
 obsolete_by   = "Griffoneers"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3112,7 +3187,7 @@ class         = "Flier"
 tech_req      = "Mounted Flight"
 obsolete_by   = "Chameran Skyknights"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3138,14 +3213,13 @@ helptext      = _("\
 Skyknights are deadly flying cavalry with high speed.\
 ")
 
-
 [unit_griffoneers]
 name          = _("Griffoneers")
 class         = "Flier"
 tech_req      = "Mounted Flight"
 obsolete_by   = "None"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3183,7 +3257,7 @@ tech_req      = "Mounted Flight"
 impr_req      = "Chameran Aviation Academy"
 obsolete_by   = "None"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3208,7 +3282,7 @@ bonuses       =
 	"AirAttacker", "DefenseMultiplier", 1
    }
 targets       = "Air", "Helicopter", "Flier"
-roles         = "AttackFastStartUnit", "Hunter"
+roles         = "Hunter"
 helptext      = _("\
 Elite Skyknights with higher damage and mobility.\
  Possess a defense bonus against other air-attacking units.\
@@ -3221,7 +3295,7 @@ tech_req      = "Arcane Forging"
 impr_req      = "Chameran Aviation Academy"
 obsolete_by   = "None"
 graphic       = "u.galleon"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_fighter"
 sound_move_alt = "m_generic"
 sound_fight   = "f_galleon"
@@ -3246,7 +3320,7 @@ bonuses       =
    }
 flags         = "IgZOC", "AirAttacker", "IgTer"
 targets       = "Air", "Helicopter", "Flier"
-roles         = "AttackFastStartUnit", "Hunter"
+roles         = ""
 helptext      = _("\
 Stronger but more costly variants of the standard\
  skyship. Possess a defense bonus against other\ 
@@ -3260,7 +3334,7 @@ tech_req      = "Mounted Flight"
 impr_req      = "Chameran Aviation Academy"
 obsolete_by   = "None"
 graphic       = "u.dragoons"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_dragoons"
 sound_move_alt = "m_generic"
 sound_fight   = "f_dragoons"
@@ -3299,7 +3373,7 @@ tech_req      = "Metallurgy"
 impr_req      = "Ensdaelian Grand Forge"
 obsolete_by   = "None"
 graphic       = "u.artillery"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
@@ -3340,7 +3414,7 @@ tech_req      = "Mana Diffusion"
 impr_req      = "Ensdaelian Grand Forge"
 obsolete_by   = "None"
 graphic       = "u.artillery"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
@@ -3370,9 +3444,8 @@ The Rift Cannon is a powerful seige weapon\
  capable of wiping out an entire force in one go.\
  It has the highest lethality out of any weapon\
  known to man, even going beyond that of a nuclear\
- missile. No force can survive its wrath for long.\
+ missile. No target can survive its wrath for long.\
 ")
-
 
 [unit_skybreaker]
 name          = _("Skybreaker")
@@ -3381,7 +3454,7 @@ tech_req      = "Metallurgy"
 impr_req      = "Ensdaelian Grand Forge"
 obsolete_by   = "None"
 graphic       = "u.artillery"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_artillery"
 sound_move_alt = "m_generic"
 sound_fight   = "f_artillery"
@@ -3422,7 +3495,7 @@ class         = "Sea"
 tech_req      = "Oceanic Domestication"
 obsolete_by   = "None"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -3456,7 +3529,7 @@ class         = "Sea"
 tech_req      = "Oceanic Mounting"
 obsolete_by   = "None"
 graphic       = "u.horsemen"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_horsemen"
 sound_move_alt = "m_generic"
 sound_fight   = "f_horsemen"
@@ -3605,7 +3678,7 @@ class         = "Land"
 tech_req      = "Feral Domestication"
 obsolete_by   = "Dire Wolf Pack"
 graphic       = "u.horsemen"; Temporary
-graphic_alt   = "-"; Temporary
+graphic_alt   = "u.generic"; Temporary
 sound_move    = "m_horsemen"; Temporary
 sound_move_alt = "m_generic"; Temporary
 sound_fight   = "f_horsemen"; Temporary
@@ -3641,7 +3714,7 @@ class         = "Land"
 tech_req      = "Beast Mastery"
 obsolete_by   = "Worg Pack"
 graphic       = "u.horsemen"; Temporary
-graphic_alt   = "-"; Temporary
+graphic_alt   = "u.generic"; Temporary
 sound_move    = "m_horsemen"; Temporary
 sound_move_alt = "m_generic"; Temporary
 sound_fight   = "f_horsemen"; Temporary
@@ -3676,7 +3749,7 @@ class         = "Land"
 tech_req      = "Monstrous Companionship"
 obsolete_by   = "Worg Riders"
 graphic       = "u.horsemen"; Temporary
-graphic_alt   = "-"; Temporary
+graphic_alt   = "u.generic"; Temporary
 sound_move    = "m_horsemen"; Temporary
 sound_move_alt = "m_generic"; Temporary
 sound_fight   = "f_horsemen"; Temporary
@@ -3712,7 +3785,7 @@ tech_req      = "Monstrous Companionship"
 impr_req      = "Beast Stables"
 obsolete_by   = "None"
 graphic       = "u.horsemen"; Temporary
-graphic_alt   = "-"; Temporary
+graphic_alt   = "u.generic"; Temporary
 sound_move    = "m_horsemen"; Temporary
 sound_move_alt = "m_generic"; Temporary
 sound_fight   = "f_horsemen"; Temporary
@@ -3734,10 +3807,10 @@ uk_gold       = 1
 flags         = "Capturer", "Beast", "Mounted"
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
-Mounted worgs have the added\
- benefit of being able to\
- defend themselves due to having\
- a capable rider to back them up.
+Mounted worgs have the added benefit\
+ of being able to defend themselves\
+ due to having a capable rider to back\
+ them up.\
 ")
 
 [unit_kth_hunters]
@@ -3778,11 +3851,11 @@ The basic Kth warrior unit,\
 [unit_thunderstrobe]
 name          = _("Thunderstrobe")
 class         = "Sea"
-tech_req      = "Navigation"
+tech_req      = "Seafaring"
 impr_req      = "Noraskan Harbor"
 obsolete_by   = "Ironclad"
 graphic       = "u.frigate"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
@@ -3812,11 +3885,11 @@ The Thunderstrobe is a specialized frigate\
 [unit_stormscourge]
 name          = _("Stormscourge")
 class         = "Sea"
-tech_req      = "Navigation"
+tech_req      = "Seafaring"
 impr_req      = "Noraskan Harbor"
 obsolete_by   = "Ironclad"
 graphic       = "u.frigate"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_frigate"
 sound_move_alt = "m_generic"
 sound_fight   = "f_frigate"
@@ -3838,14 +3911,13 @@ uk_gold       = 1
 flags         = "BadCityDefender"
 roles         = "Hunter"
 helptext      = _("\
-The Thunderstrobe is a specialized frigate\
+The Stormscourge is a specialized frigate\
  that has higher atack and speed but is\
  much more fragile. It is best designed\
  for hunting down enemy transports, as\
- it has trouble taking down stronger\
+ it has trouble defending against stronger\
  combatants.\
 ")
-
 
 [unit_mages]
 name          = _("Mages")
@@ -3853,7 +3925,7 @@ class         = "Land"
 tech_req      = "Sorcerous Arts"
 obsolete_by   = "None"
 graphic       = "u.archers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
@@ -3872,7 +3944,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "BadCityDefender"
+flags         = ""
 roles         = "AttackStrongStartUnit", "DefendGood"
 helptext      = _("\
 Mages are militarized spellcasters\
@@ -3886,14 +3958,14 @@ class         = "Land"
 tech_req      = "Pyromancy"
 obsolete_by   = "None"
 graphic       = "u.archers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
-attack        = 30
+attack        = 10
 defense       = 0
 hitpoints     = 10
 firepower     = 1
@@ -3920,15 +3992,15 @@ class         = "Land"
 tech_req      = "Aquamancy"
 obsolete_by   = "None"
 graphic       = "u.archers"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_archers"
 sound_move_alt = "m_generic"
 sound_fight   = "f_archers"
 sound_fight_alt = "f_generic"
-build_cost    = 30
+build_cost    = 20
 pop_cost      = 0
 attack        = 0
-defense       = 30
+defense       = 10
 hitpoints     = 10
 firepower     = 1
 move_rate     = 1
@@ -3958,7 +4030,7 @@ class         = "Land"
 tech_req      = "Beast Mastery"
 obsolete_by   = "None"
 graphic       = "u.saurian"
-graphic_alt   = "-"
+graphic_alt   = "u.generic"
 sound_move    = "m_elephants"
 sound_move_alt = "m_generic"
 sound_fight   = "f_elephants"
@@ -4071,7 +4143,6 @@ A juvenile Zephyrodon is much\
  game.\
 ")
 
-
 [unit_zephyrodon]
 name          = _("Zephyrodon")
 class         = "Land"
@@ -4138,8 +4209,8 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 0
-flags         = "NoHome", "Beast"
-targets = "Burrowing"
+flags         = "NoHome", "Beast", "Partial_Invis"
+targets       = "Burrowing"
 roles         = "Hunter"
 helptext      = _("\
 Giant Worms are gigantic predators\
@@ -4174,7 +4245,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 2
 uk_gold       = 1
-flags         = "Capturer", "Beast", "Mounted"
+flags         = "Capturer", "Beast", "Mounted", "Partial_Invis"
 targets = "Burrowing"
 roles         = "Hunter"
 helptext      = _("\
@@ -4210,7 +4281,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 4
 uk_gold       = 0
-flags         = "NoHome", "Beast"
+flags         = "NoHome", "Beast", "Partial_Invis"
 targets = "Burrowing"
 roles         = "Hunter"
 helptext      = _("\
@@ -4251,7 +4322,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 4
 uk_gold       = 0
-flags         = "Capturer", "Beast", "Mounted"
+flags         = "Capturer", "Beast", "Mounted", "Partial_Invis"
 targets = "Burrowing"
 roles         = "Hunter"
 helptext      = _("\
@@ -4259,4 +4330,119 @@ When mounted, deathworms benefit from\
  extra defense and the ability to capture\
  certain targets rather than outright kill 
  them due to having an intelligent rider.\
+")
+
+[unit_exodii_laserbladers]
+name          = _("Exodii Laserbladers")
+class         = "Land"
+tech_req      = "Exodii Tech"
+obsolete_by   = "None"
+impr_req      = "Exodii Cloning Facility"
+graphic       = "u.legion"
+graphic_alt   = "u.generic"
+sound_move    = "m_legion"
+sound_move_alt = "m_generic"
+sound_fight   = "f_legion"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 30
+defense       = 20
+hitpoints     = 5
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+	"WeakMelee", "DefenseDivider", 1
+   }
+flags         = "Marines", "Capturer"
+roles         = "DefendOk", "BarbarianBuild", "BarbarianSea", "Partisan"
+helptext      = _("\
+Laserbladers are standard Exodii swordsman\
+ that wield beamswords that can slice through\
+ the thickest armor.\
+")
+
+[unit_exodii_warpers]
+name          = _("Exodii Warpers")
+class         = "Land"
+tech_req      = "Exodii Tech"
+obsolete_by   = "None"
+impr_req      = "Exodii Cloning Facility"
+graphic       = "u.paratroopers"
+graphic_alt   = "u.generic"
+sound_move    = "m_paratroopers"
+sound_move_alt = "m_generic"
+sound_fight   = "f_paratroopers"
+sound_fight_alt = "f_generic"
+build_cost    = 60
+pop_cost      = 0
+attack        = 40
+defense       = 5
+hitpoints     = 5
+firepower     = 1
+move_rate     = 5
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+embarks       = "Helicopter"
+disembarks    = "Helicopter"
+flags         = "Paratroopers", "Capturer", "IgTer"
+roles         = "Hunter"
+helptext      = _("\
+Warpers are enhanced Paratroopers that teleport to their destination,\
+ allowing for incredibly long-distance deployment. Equipped with Exodii\
+ Ion-Blasters, they are no easy pickings, either. But beware of dropping\
+ into unseen territory, as Warpers landing on a tile occupied by enemy units\
+ are easy targets!\
+")
+paratroopers_range = 50
+paratroopers_mr_req = 0
+paratroopers_mr_sub = 0
+
+[unit_exodii_drone]
+name          = _("Exodii Drone")
+class         = "Air"
+tech_req      = "Exodii Tech"
+obsolete_by   = "None"
+impr_req      = "Exodii Production Facility"
+graphic       = "u.awacs"
+graphic_alt   = "u.bomber"  ; backwards compatibility
+sound_move    = "m_awacs"
+sound_move_alt = "m_generic"
+sound_fight   = "f_awacs"
+sound_fight_alt = "f_generic"
+build_cost    = 170
+pop_cost      = 0
+attack        = 0
+defense       = 0
+hitpoints     = 5
+firepower     = 1
+move_rate     = 30
+vision_radius_sq = 50
+transport_cap = 0
+fuel          = 3
+uk_happy      = 0
+uk_shield     = 1
+uk_food       = 0
+uk_gold       = 1
+flags         = "HasNoZOC", "Partial_Invis"
+roles         = "Explorer"
+helptext      = _("\
+Exodii Drones are incredibly efficient spy robots\
+ that fly at unbelievable speeds and have a massive\
+ sight radius. They are also invisible to non-adjacent\
+ units. Combined, these features make them perfect for\
+ reconaissance.\
 ")

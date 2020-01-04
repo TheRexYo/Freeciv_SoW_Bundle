@@ -1214,3 +1214,13 @@ flags    = ""
 graphic     = "a.the_republic"
 graphic_alt = "-"
 cost     = 0
+
+[advance_exodii]
+name     = _("Exodii Tech")
+req1     = "None"
+req2     = "None"
+root_req = "Exodii Tech"
+flags    = ""
+graphic  = "a.the_republic"
+graphic_alt = "-"
+cost     = 0

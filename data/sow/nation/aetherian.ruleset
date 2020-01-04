@@ -5,7 +5,8 @@ plural=_("?plural:Aetherians")
 groups="Ancient", "Erath", "Extended"
 legend=_("The Aetherians are a people of extremes. Whether a force of extreme good or evil,
 they never walk the middle line.
-\n* Can rapture grow regardless of government.
+\n* Can rapture grow regardless of government. City size requirement for rapture growth is 1.
+With both factors combined, any city can Rapture Grow regardless of size or government.
 ")
 
 
@@ -32,13 +33,13 @@ init_buildings=""
 init_units=""
 civilwar_nations = "skyfolk", "wasteraider"
 
+trait_expansionist = 75
+trait_trader       = 50
+trait_aggressive   = 50
+
 cities =
  "Omnor",
  "Aerin",
  "Terra",
  "Aquae",
  "Pyror"
-
-trait_expansionist = 75
-trait_trader       = 50
-trait_aggressive   = 50

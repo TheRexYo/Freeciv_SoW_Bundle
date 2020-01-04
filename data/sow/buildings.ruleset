@@ -1536,7 +1536,6 @@ name		= _("Eye Of The Gods")
 genus		= "GreatWonder"
 reqs	=
     { "type", "name", "range"
-      "Tech", "Mana Diffusion", "Player"
       "Building", "Temple Verde", "Alliance", TRUE
 	  "Building", "Temple Desolus", "Alliance", TRUE
     }
@@ -1683,4 +1682,78 @@ sound		= "b_harbour"
 sound_alt	= "b_generic"
 helptext	= _("\
 Gives access to Noraskan sea units.\
+")
+
+[building_exodii_cloning_facility]
+name		= _("Exodii Cloning Facility")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Exodii Tech", "Player"
+    }
+graphic	= "b.research_lab"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 300
+upkeep		= 5
+sabotage	= 100
+sound		= "b_research_lab"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows for the production of Exodii\
+ standard units, provided the owner\ 
+ possesses Exodii tech.\
+")
+
+[building_exodii_production_facility]
+name		= _("Exodii Production Facility")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Exodii Tech", "Player"
+    }
+graphic	= "b.factory"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 300
+upkeep		= 5
+sabotage	= 100
+sound		= "b_research_lab"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Allows for the production of Exodii\
+ mechanized units, provided the owner\
+ possesses Exodii tech.\
+")
+
+[building_arcanian_forest]
+name		= _("Arcanian Forest")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+	  "Nation", "Arcanian", "Player"
+    }
+graphic	= "b.granary"; Temporary
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 40
+upkeep		= 1
+sabotage	= 100
+sound		= "b_granary"
+sound_alt	= "b_generic"
+helptext	= _("\
+Arcanian Forests are dense, man-made forests\
+ designed to maximize natural beauty. They are\
+ also safe havens for many animals. Increases\
+ the production of forests worked by the city.\
+ Also allows the production of 'Arcanian Phalanx'\
+ when combined with 'Bronze Working'.\
 ")

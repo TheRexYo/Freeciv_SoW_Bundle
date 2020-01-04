@@ -1654,6 +1654,22 @@ reqs    =
       "Tech", "Guerilla Warfare", "World", TRUE
       "NationGroup", "Barbarian", "Player", FALSE
     }
+	
+[effect_democracy_rapture]
+type    = "Rapture_Grow"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Democracy", "Player"
+    }
+	
+[effect_republic_rapture]
+type    = "Rapture_Grow"
+value   = 3
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Republic", "Player"
+    }
 
 [effect_lux_federation]
 type    = "Output_Add_Tile"
@@ -3473,6 +3489,24 @@ reqs    =
 	  "OutputType", "Science", "Local", FALSE
     }
 
+; Exodii Bonus (Helps counter the "Mana Diffusion" tech, which players must have for them to spawn anyway)
+[effect_exodii_tile_production]
+type    = "Output_Add_Tile"
+value   = 5
+reqs    =
+    { "type", "name", "range"
+	  "Nation", "Exodii", "Player"
+    }
+
+;Exodii Can't Make Friends
+[effect_exodii_diplomacy]
+type    = "No_Diplomacy"
+value   = 1
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Nation", "Exodii", "Player", TRUE
+    }
+	
 [effect_irrigate_src_ocean]
 type    = "Irrig_Possible"
 value   = 1
@@ -3627,7 +3661,6 @@ reqs    =
     { "type", "name", "range", "present"
       "Nation", "Neph", "Player", TRUE
     }
-
 
 [effect_aetherian]
 type    = "Rapture_Grow"

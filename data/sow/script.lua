@@ -17,15 +17,26 @@
 endtimes = false
 alerted = false
 gamestarted = false
+forceendtimes = false
+exodiispawnlist = {}
+exodiispawnlist[1] = {} --Default
+exodiispawnlist[2] = {} --Vanguard
+-- Start of Default Exodii Spawn List --
+exodiispawnlist[1][1] = "Exodii Laserbladers"
+-- End of Default Exodii Spawn List --
+-- Start of Vanguard Exodii Spawn List --
+exodiispawnlist[2][1] = "Exodii Laserbladers"
+exodiispawnlist[2][2] = "Exodii Warpers"
+-- End of Vanguard Exodii Spawn List --
 messages = {}
 -- Start of Messages --
 messages["Aetherian"] = "\
 The Aetherians form a balanced nation\
  that can grow rapidly due to its\
- ability to 'Rapture Grow'. This means\
- that all cities of size three or larger\
- grow by one citizen per turn, provided it\
- has no unhappy citizens and at least 50% of\
+ ability to 'Rapture Grow' regardless of size or\
+ government. This means that all cities, no matter\
+ how large, grow by one citizen per turn, provided\
+ it has no unhappy citizens and at least 50% of\
  its citizens are happy rather than content.\
  \n*Tip: Try to keep your citizens as happy as\
  possible. This will ensure maximum growth.\
@@ -145,6 +156,39 @@ end
 
 signal.connect("building_built", "building_built_callback")
 
+function NationExists(name)
+	for player in players_iterate() do
+		local nation = player.nation
+		local nationname = nation:rule_name()
+		if nationname == name then
+			return true
+		end
+	end
+	return false
+end
+
+function GetNation(name)
+	for player in players_iterate() do
+		local nation = player.nation
+		local nationname = nation:rule_name()
+		if nationname == name then
+			return nation
+		end
+	end
+	return nil
+end
+
+function GetNationsPlayer(name)
+	for player in players_iterate() do
+		local nation = player.nation
+		local nationname = nation:rule_name()
+		if nationname == name then
+			return player
+		end
+	end
+	return nil
+end
+
 function initialize(player)
 	local nation = player.nation
 	local nationname = nation:rule_name()
@@ -155,29 +199,141 @@ function initialize(player)
 	end
 end
 
-function endtimes_callback(turn, year)
-	local targets = {}
-	for player in players_iterate() do
-	  if turn == 1 then
-		initialize(player)
-	  end
-	  local check = player:has_wonder(find.building_type("Eye Of The Gods"))
-	  if check then
-		endtimes = true
-	  end
+function CreateExodii()
+	local alive = NationExists("Exodii")
+	if alive == nil or alive == false then
+		if alerted == false then
+			notify.all("The endtimes are upon us...")
+			alerted = true
+		end
+		local nationtype = find.nation_type("Exodii")
+		local exodii = edit.create_player("Exo", nationtype, nil)
+		SpawnExodii(exodii)
+	else
+		--DO NOTHING.
 	end
-	if endtimes == true then
-		if year >= 1000 then
-			local alive = find.nation_type("Exodii")
-			if alive == nil and alerted == false then
-				notify.all("The endtimes are upon us...")
-				local exodii = edit.create_player("Exodii", "Exodii", nil)
-				alerted = true
-			else
-			
-			end
+end
+
+function CreateExodiiVanguardUnits(exodii, tile, moves, level)
+	if exodii == nil then
+		exodii = GetNation("Exodii")
+	end
+	homecity = GetCityFromPlayer(exodii, "The Breach")
+	local unitname = exodiispawnlist[1][math.random(1,#exodiispawnlist[1])]
+	local unittype
+	unittype = find.unit_type(unitname)
+	local unit = edit.create_unit(exodii, tile, unittype, level, homecity, moves)
+	for player in players_iterate() do
+		local nation = player.nation
+		if nation ~= exodii then
+			notify.event(player, tile, E.SCRIPT, "The Exodii receive reinforcements!")
 		end
 	end
+end
+
+function GetCityFromPlayer(player, name)
+	for city in player:cities_iterate() do
+		if city.name == name then
+			return city
+		end
+	end
+	return nil
+end
+function CreateExodiiUnits(exodii, tile, homecity, moves, level)
+	if exodii == nil then
+		exodii = GetNation("Exodii")
+	end
+	if homecity == nil then
+		homecity = GetCityFromPlayer(exodii, "The Breach")
+	end
+	local unitname = exodiispawnlist[2][math.random(1,#exodiispawnlist[2])]
+	local unittype
+	unittype = find.unit_type(unitname)
+	local unit = edit.create_unit(exodii, tile, unittype, level, homecity, moves)
+	for player in players_iterate() do
+		local nation = player.nation
+		if nation ~= exodii then
+			notify.event(player, tile, E.SCRIPT, "The Exodii receive reinforcements!")
+		end
+	end
+end
+
+function IsSuitableBreachingPoint(tile, exodii)
+	print("Running function: 'IsSuitableBreachingPoint()'")
+	if exodii == nil then
+		exodii = GetNation("Exodii")
+	end
+	local terrain = tile.terrain
+	local terrain_name = terrain:rule_name()
+	print(tostring(terrain_name))
+	if terrain_name == "Ocean" then
+		return false
+	elseif terrain_name == "Lake" then
+		return false
+	elseif terrain_name == "Inaccessible" then
+		return false
+	elseif terrain_name == "Deep Ocean" then
+		return false
+	end
+	if terrain_name == "Wastes" then
+		return false
+	elseif terrain_name == "Lava Flats" then
+		return false
+	elseif terrain_name == "Blood Spires" then
+		return false
+	end
+	return true
+end
+
+function SpawnExodii(exodii)
+	if exodii == nil then
+		exodii = GetNation("Exodii")
+	end
+	local oldtile = find.tile(0,0)
+	local newtile
+	for tile in oldtile:square_iterate(1) do
+		local check = IsSuitableBreachingPoint(tile, exodii)
+		if check == true then
+			newtile = tile
+		end
+	end
+	local city = edit.create_city(exodii, newtile, "The Breach")
+	for player in players_iterate() do
+		local nation = player.nation
+		if nation ~= exodii then
+			notify.event(player, newtile, E.SCRIPT, "A mysterious force has begun to invade the world!")
+		end
+	end
+	local vanguard = CreateExodiiVanguardUnits(exodii, newtile, 0, 1)
+end
+
+function endtimes_callback(turn, year)
+	local targets = {}
+	local ManaDiffusionExists
+	for player in players_iterate() do
+        if turn == 0 then
+            initialize(player)
+        end
+        local check = player:has_wonder(find.building_type("Eye Of The Gods"))
+        if check then
+            endtimes = true
+            if player:knows_tech(find.tech_type(reqtechname)) then
+                ManaDiffusionExists = true
+            end
+        end
+        if endtimes == true then
+            local reqtechname = "Mana Diffusion"
+            if year >= 1000 then
+                CreateExodii()
+            elseif ManaDiffusionExists then
+                CreateExodii()
+            elseif forceendtimes == true then
+                CreateExodii()
+            end
+        elseif forceendtimes == true then
+            CreateExodii()
+        end
+    end
     return false
   end
  
