@@ -1757,3 +1757,27 @@ Arcanian Forests are dense, man-made forests\
  Also allows the production of 'Arcanian Phalanx'\
  when combined with 'Bronze Working'.\
 ")
+
+[building_zegrek_garrison]
+name		= _("Zegrek Garrison")
+genus		= "Improvement"
+reqs	=
+    { "type", "name", "range"
+		"Nation", "Zegrek", "Player"
+    }
+graphic	= "b.barracks_i"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range"
+    }
+build_cost	= 30
+upkeep		= 1
+sabotage	= 100
+sound		= "b_barracks_i"
+sound_alt	= "b_generic"
+; /* xgettext:no-c-format */
+helptext	= _("\
+Increases the defense of units within the city.\
+ Also allows the production of 'Zegrek Phalanx'\
+ when combined with 'Bronze Working'.\
+")

@@ -13,6 +13,7 @@ The most successful barbarian empire ever to\
 leaders = {
  "name",              "sex"
  "Arilla Khar",       "Male"
+ "Zalia Khar",        "Female"
 }
 
 flag="barbarian"

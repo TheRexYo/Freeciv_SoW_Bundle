@@ -26,10 +26,10 @@
 #define AUDIO_SDL 1
 
 /* SDL-1.2 Mixer in use */
-#define AUDIO_SDL1_2 1
+/* #undef AUDIO_SDL1_2 */
 
 /* SDL-2 Mixer in use */
-/* #undef AUDIO_SDL2 */
+#define AUDIO_SDL2 1
 
 /* Bug reporting URL */
 #define BUG_URL "https://www.hostedredmine.com/projects/freeciv"

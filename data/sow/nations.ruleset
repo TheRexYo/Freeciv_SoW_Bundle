@@ -50,7 +50,7 @@ trader_max = 90
 trader_default = 50
 
 ; Value of trait "aggressive" defines how easily AI declares war.
-aggressive_min = 1
+aggressive_min = 10
 aggressive_max = 90
 aggressive_default = 50
 

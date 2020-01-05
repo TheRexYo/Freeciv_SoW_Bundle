@@ -38,8 +38,8 @@ trait_trader       = 65
 trait_aggressive   = 50
 
 cities =
- "Omnor",
- "Aerin",
- "Terra",
- "Aquae",
- "Pyror"
+ "Mantaria",
+ "Tehgaia",
+ "Orchenos",
+ "Tethyn",
+ "Kapheae"

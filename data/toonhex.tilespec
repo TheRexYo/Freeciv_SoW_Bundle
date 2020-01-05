@@ -6,7 +6,7 @@ options = "+Freeciv-2.6-tilespec"
 
 ; A simple name for the tileset specified by this file:
 name = "Toonhex"
-; Based on sowhex, which in turn is based on
+; Based on hexemplio, which in turn is based on
 ; amplio2hexgbig by GriffonSpade
 
 priority = 3
@@ -15,7 +15,7 @@ priority = 3
 ;version = ""
 
 ; Summary and full description of the tileset.
-summary = _("Tileset combining sowhex's terrains and Cimpletoon's units with orientation.")
+summary = _("Tileset combining Hexemplio's terrains and Cimpletoon's units with orientation.")
 ;description = ""
 
 ; TODO: add more overall information fields on tiles, 
@@ -113,29 +113,29 @@ files =
   "misc/treaty.spec",
   "misc/icons.spec",
   "misc/editor.spec",
-  "sowhex/units.spec",
+  "cimpletoon/orient_units.spec",
   "amplio2/nuke.spec",
   "amplio2/explosions.spec",
-  "sowhex/activities.spec",
-  "sowhex/bases.spec",
-  "sowhex/cities.spec",
-  "sowhex/terrain.spec",
-  "sowhex/embellishments.spec",
-  "sowhex/forests.spec",
-  "sowhex/hills.spec",
-  "sowhex/mountains.spec",
-  "sowhex/tiles.spec",
-  "sowhex/grid.spec",
-  "sowhex/rivers.spec",
-  "sowhex/roads.spec",
-  "sowhex/roads-rails.spec",
-  "sowhex/roads-maglevs.spec",
-  "sowhex/unitextras.spec",
-  "sowhex/unitcost.spec",
-  "sowhex/select.spec",
-  "sowhex/water1.spec",
-  "sowhex/water2.spec",
-  "sowhex/water3.spec"
+  "hexemplio/activities.spec",
+  "hexemplio/bases.spec",
+  "hexemplio/cities.spec",
+  "hexemplio/terrain.spec",
+  "hexemplio/embellishments.spec",
+  "hexemplio/forests.spec",
+  "hexemplio/hills.spec",
+  "hexemplio/mountains.spec",
+  "hexemplio/tiles.spec",
+  "hexemplio/grid.spec",
+  "hexemplio/rivers.spec",
+  "hexemplio/roads.spec",
+  "hexemplio/roads-rails.spec",
+  "hexemplio/roads-maglevs.spec",
+  "hexemplio/unitextras.spec",
+  "hexemplio/unitcost.spec",
+  "hexemplio/select.spec",
+  "hexemplio/water1.spec",
+  "hexemplio/water2.spec",
+  "hexemplio/water3.spec"
 
 
 ; Include color definitions

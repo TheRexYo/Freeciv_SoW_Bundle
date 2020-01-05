@@ -135,6 +135,19 @@ The Neph form a balanced nation that is best suited\
  defend them, provided the requirements for the 'Partisan' unit are met.\
  Use this to your advantage when fighting a war.\
 "
+
+messages["Zegrek"] = "\
+The Zegrek form a powerful military-oriented nation\
+ best-suited for rapid early-game advances. This is\
+ because they possess an enhanced version of the\
+ Phalanx that is rather difficult to combat due to\
+ its high defense. Additionally, they also possess\
+ a building that allows them to produce that unit:\
+ the Zegrek Garrison. This building doesn't only\
+ make it so the city can build better Phalanxes, but\
+ also causes the city to Inspire Partisans to defend\
+ it when captured.\
+"
 --  End of Messages  --
 -- Place Ruins at the location of the destroyed city.
 function city_destroyed_callback(city, loser, destroyer)

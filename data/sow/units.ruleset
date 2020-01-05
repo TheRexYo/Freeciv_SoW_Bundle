@@ -843,8 +843,47 @@ bonuses       =
 flags         = "Capturer", "IgTer"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
-The Phalanx is armored infantry, suitable for defending your cities\
- and capturing your enemies'.\
+Trained to travel through dense forests,\
+ Arcanian Phalanxes have the ability to\
+ move unhindered through rough terrain.\
+")
+
+[unit_zegrek_phalanx]
+name          = _("Zegrek Phalanx")
+class         = "Land"
+tech_req      = "Bronze Working"
+impr_req      = "Zegrek Garrison"
+obsolete_by   = "Musketeers"
+graphic       = "u.phalanx"
+graphic_alt   = "u.generic"
+sound_move    = "m_phalanx"
+sound_move_alt = "m_generic"
+sound_fight   = "f_phalanx"
+sound_fight_alt = "f_generic"
+build_cost    = 30
+pop_cost      = 0
+attack        = 2
+defense       = 4
+hitpoints     = 10
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 2
+transport_cap = 0
+fuel          = 0
+uk_happy      = 1
+uk_shield     = 1
+uk_food       = 1
+uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Mounted", "DefenseMultiplier", 1
+   }
+flags         = "Capturer"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
+helptext      = _("\
+Zegrek Phalanxes are more advanced then their standard counterparts,\
+ with enhanced defensive prowess. However, they lack the melee\
+ capabilities that the latter possesses due to their longer polearms.\
 ")
 
 [unit_archers]
@@ -1015,7 +1054,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Marines", "Capturer", "WeakMelee"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech", "Partisan"
 helptext      = _("\
@@ -1049,7 +1088,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Marines", "Capturer", "WeakMelee"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
@@ -1795,7 +1834,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "WeakMelee"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 Catapults are large rock-throwing machines of war.\
@@ -1833,7 +1872,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = ""
+flags         = "WeakMelee"
 roles         = "AttackStrongStartUnit", "BarbarianTech", "BarbarianBuildTech"
 helptext      = _("\
 Cannons are large firearms that can fire heavy projectiles over long \
@@ -1867,7 +1906,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster"
+flags         = "CityBuster", "WeakMelee"
 roles         = "AttackStrongStartUnit"
 helptext      = _("\
 The artillery is an upgraded cannon. As with its predecessors, it is a \

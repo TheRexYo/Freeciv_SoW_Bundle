@@ -3967,3 +3967,15 @@ reqs    =
       "Tech", "Natural Unity", "Player", TRUE
       "UnitFlag", "Beast", "Local", TRUE
     }
+
+; Zegrek Garrisons inspire Partisan units.
+[effect_zegrek_garrison_inspire_partisans]
+type    = "Inspire_Partisans"
+value   = 1
+reqs   =
+    { "type", "name", "range", "present"
+      "Building", "Zegrek Garrison", "City", TRUE
+    }
+	
+	
+; Add nothing below this line.

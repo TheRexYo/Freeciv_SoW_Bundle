@@ -136,15 +136,14 @@ default_nationset = "all"
 ; See doc/README.nations for information on how to
 ; create nation rulesets, including style guidelines.
 
+*include "sow/nation/imperian.ruleset"
+*include "sow/nation/kthii.ruleset"
+*include "sow/nation/mesyptian.ruleset"
+*include "sow/nation/noraskan.ruleset"
+*include "sow/nation/rhonan.ruleset"
 *include "sow/nation/skyfolk.ruleset"
 *include "sow/nation/wasteraider.ruleset"
-*include "sow/nation/aetherian.ruleset"
-*include "sow/nation/imperian.ruleset"
-*include "sow/nation/neph.ruleset"
-*include "sow/nation/kth.ruleset"
-*include "sow/nation/kthii.ruleset"
-*include "sow/nation/rhonan.ruleset"
-*include "sow/nation/noraskan.ruleset"
-*include "sow/nation/mesyptian.ruleset"
-*include "sow/nation/arcanian.ruleset"
-*include "sow/nation/kharndii.ruleset"
+*include "sow/nation/zegrek.ruleset"
+
+*include "sow/extendednationlist.ruleset"
+;Don't add or remove anything beneath this point!

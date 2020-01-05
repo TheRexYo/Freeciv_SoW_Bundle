@@ -132,8 +132,8 @@ graphic     = "gov.tribal"
 graphic_alt = "s.tax_luxury"
 ai_better   = "Republic"
 
-ruler_male_title = _("Warlord %s")
-ruler_female_title = _("Warlady %s")
+ruler_male_title = _("Chief %s")
+ruler_female_title = _("Chief %s")
 
 helptext = _("\
 Under a Tribal government, you are part ruler of your people. Your\
@@ -171,8 +171,8 @@ graphic     = "gov.despotism"
 graphic_alt = "-"
 ai_better   = "Monarchy"
 
-ruler_male_title = _("Chief %s")
-ruler_female_title = _("?female:Chief %s")
+ruler_male_title = _("Lord %s")
+ruler_female_title = _("?female:Lady %s")
 
 helptext = _("\
 Under Despotism, you are the absolute ruler of your people.  Your\
