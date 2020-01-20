@@ -107,6 +107,10 @@ hidden=true
 name=_("?nationgroup:Verdant Bonus")
 match=0
 hidden=true
+[ngroup_hive]
+name=_("?nationgroup:Hive")
+match=0
+hidden=true
 [compatibility]
 
 ; Compatibility: these nations are intended for use in a variety of

@@ -21,10 +21,10 @@ leaders = {
 
 ruler_titles = {
  "government",      "male_title",           "female_title"
- "Anarchy",         _("Chief %s"),      _("?female:Chief %s")
- "Despotism",       _("High-Priest %s"),         _("High-Priest %s")
- "Fundamentalism",  _("Chosen %s"),         _("?female:Chosen %s")
- "Republic",        _("Lord-Chosen %s"), _("Lady-Chosen %s")
+ "Anarchy",         _("Chyfe %s"),           _("?female:Chyfa %s"); "Chief"
+ "Despotism",       _("Kin-Daere %s"),       _("Kin-Daera %s"); "Lord-Chosen"
+ "Fundamentalism",  _("Aeri-Renere %s"),     _("?female:Aeri-Renera %s"); "High-Priest / High-Priestess"
+ "Republic",        _("Daere %s"),           _("Daera %s"); "Chosen"
 }
 
 flag="england"

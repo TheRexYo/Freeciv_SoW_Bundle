@@ -28,10 +28,11 @@ leaders = {
 
 ruler_titles = {
  "government",      "male_title",           "female_title"
- "Anarchy",         _("Chief %s"),      _("?female:Chief %s")
- "Despotism",       _("King %s"),         _("Queen %s")
- "Fundamentalism",  _("High-Priest %s"),         _("?female:High-Priestess %s")
- "Republic",        _("Provider %s"), _("Provider %s")
+ "Anarchy",         _("Chyeffe %s"),        _("?female:Chyeffe %s"); "Chief"
+ "Despotism",       _("Kanu %s"),           _("Kana %s"); "Lord / Lady"
+ "Monarchy",        _("Kinu %s"),           _("Qina %s"); "King / Queen"
+ "Fundamentalism",  _("Ayle-Rene %s"),      _("?female:Ayle-Rena %s"); "High-Priest"
+ "Republic",        _("Padu %s"),           _("Pada %s"); "Provider"
 }
 
 flag="england"

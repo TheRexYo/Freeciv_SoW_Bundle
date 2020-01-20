@@ -440,7 +440,7 @@ _("\
 
 name        = _("Hive")
 reqs = { "type", "name", "range"
-         "Nation", "Kth", "Player"
+         "NationGroup", "Hive", "Player"
        }
 graphic     = "gov.monarchy"
 graphic_alt = "-"

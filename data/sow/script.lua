@@ -323,6 +323,7 @@ end
 function endtimes_callback(turn, year)
 	local targets = {}
 	local ManaDiffusionExists
+	local reqtechname = "Mana Diffusion"
 	for player in players_iterate() do
         if turn == 0 then
             initialize(player)
@@ -335,7 +336,6 @@ function endtimes_callback(turn, year)
             end
         end
         if endtimes == true then
-            local reqtechname = "Mana Diffusion"
             if year >= 1000 then
                 CreateExodii()
             elseif ManaDiffusionExists then

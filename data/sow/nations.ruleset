@@ -58,5 +58,6 @@ aggressive_default = 50
 *include "sow/nationlist.ruleset"
 ; Two barbarian nations, Land and Sea barbarians, needed
 *include "sow/nation/sow_barbarian.ruleset"
+*include "sow/nation/sow_beast.ruleset"
 *include "sow/nation/sow_pirate.ruleset"
 *include "sow/nation/exodii.ruleset"

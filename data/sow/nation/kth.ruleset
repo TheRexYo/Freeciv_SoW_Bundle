@@ -2,7 +2,7 @@
 
 name=_("Kth")
 plural=_("?plural:Kth")
-groups="Ancient", "Extended", "Kth", "Lava Immune"
+groups="Ancient", "Extended", "Kth", "Lava Immune", "Hive"
 legend=_("\
 The Kth are a race of intelligent insectoids that have\
  long warred with humanity. They are known for their\

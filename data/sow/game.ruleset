@@ -220,13 +220,13 @@ force_trade_route = TRUE
 ; The second %s marks where extra details should be inserted.
 
 ; /* TRANS: _Poison City (3% chance of success). */
-ui_name_poison_city = _("%sPoison City%s")
+ui_name_poison_city = _("%sKill Civilians%s")
 
 ; /* TRANS: _Sabotage Enemy Unit (3% chance of success). */
-ui_name_sabotage_unit = _("%sSabotage Enemy Unit%s")
+ui_name_sabotage_unit = _("%sWeaken Unit%s")
 
 ; /* TRANS: _Bribe Enemy Unit (3% chance of success). */
-ui_name_bribe_unit = _("%sBribe Enemy Unit%s")
+ui_name_bribe_unit = _("%sConvert Unit%s")
 
 ; /* TRANS: _Sabotage City (3% chance of success). */
 ui_name_sabotage_city = _("%sSabotage City%s")
@@ -257,6 +257,8 @@ ui_name_enter_marketplace = _("Enter %sMarketplace%s")
 
 ; /* TRANS: Help _build Wonder (100% chance of success). */
 ui_name_help_wonder = _("Help %sbuild Wonder%s")
+
+ui_name_domesticate = _("%sDomesticate%s")
 
 ; Suppress automatic help text generation about what enables and/or
 ; disables the following actions.
@@ -452,6 +454,61 @@ actor_reqs    =
       "MinMoveFrags", "1", "Local", TRUE
     }
 
+[actionenabler_domesticate]
+action = "Bribe Unit"
+actor_reqs    =
+    { "type",   "name", "range", "present"
+      "UnitFlag", "Domesticator", "Local", TRUE
+      "MinMoveFrags", "1", "Local", TRUE
+    }
+target_reqs  =
+    { "type",   "name", "range", "present"
+      "Nation", "Beast", "Player", TRUE
+	  "UnitFlag", "Domesticatable", "Local", TRUE
+    }
+
+[actionenabler_raid]
+action = "Sabotage City"
+actor_reqs    =
+    { "type",   "name", "range"
+      "UnitFlag", "Military", "Local"
+      "DiplRel", "Is foreign", "Local"
+      "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+      "Building", "City Walls", "City", FALSE
+    }
+	
+[actionenabler_besiege]
+action = "Sabotage City"
+actor_reqs    =
+    { "type",   "name", "range"
+      "UnitFlag", "Siege", "Local"
+      "DiplRel", "Is foreign", "Local"
+      "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+      "Building", "City Walls", "City", TRUE
+    }
+	
+[actionenabler_massacre]
+action = "Poison City"
+actor_reqs    =
+    { "type",   "name", "range"
+      "UnitFlag", "Military", "Local"
+      "DiplRel", "Is foreign", "Local"
+      "UnitState", "OnLivableTile", "Local"
+      "MinMoveFrags", "1", "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+      "Building", "City Walls", "City", FALSE
+    }
+
 [borders]
 ; Base border radius from city.
 radius_sq_city = 5
@@ -576,6 +633,14 @@ negative_label = _("BCE")
 ;   - "Fallout"           = One tile surrounding city polluted with fallout
 ;
 ; */ <-- avoid gettext warnings
+
+[disaster_monster_attack]
+name           = _("Monster Attack")
+reqs           =
+    { "type", "name", "range"
+    }
+frequency      = 100
+effects        = "ReducePopDestroy"
 
 [disaster_earthquake]
 name           = _("Earthquake")

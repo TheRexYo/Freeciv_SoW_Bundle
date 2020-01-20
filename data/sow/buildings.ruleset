@@ -1501,7 +1501,8 @@ sabotage	= 0
 sound		= "w_oracle"
 sound_alt	= "w_generic"
 helptext	= _("\
-Causes food storages after growth to be maxed out.\
+Causes food storages after growth to be maxed out\
+ and eliminates pollution entirely.\
  Also causes friendly units to regenerate 25% of their\
  max HP each turn.\
 ")
@@ -1519,7 +1520,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Theology", "Player", FALSE
     }
-build_cost	= 200
+build_cost	= 300
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1544,7 +1545,7 @@ graphic_alt     = "b.oracle"
 obsolete_by	=
     { "type", "name", "range", "survives"
     }
-build_cost	= 200
+build_cost	= 900
 upkeep		= 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1622,7 +1623,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Mobile Warfare", "Player"
     }
-build_cost	= 400
+build_cost	= 600
 upkeep	    = 0
 sabotage	= 0
 sound		= "w_sun_tzus_war_academy"
@@ -1648,7 +1649,7 @@ obsolete_by	=
     { "type", "name", "range", "survives"
       "Tech", "Radio", "World"
     }
-build_cost	= 300
+build_cost	= 500
 upkeep	    = 0
 sabotage	= 0
 sound		= "w_oracle"
@@ -1659,6 +1660,30 @@ Increases unit vision radius by 3.\
  with an additional 5 tile-radius for the\
  city that contains the wonder itself.\
  When built, reveals the entire map.\ 
+")
+
+[building_the_keeper]
+name		= _("The Keeper")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Bronze Working", "Player"
+    }
+graphic	= "b.colossus"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Flight", "World", TRUE
+    }
+build_cost	= 400
+upkeep	    = 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Increases the defense of allied units.\
+ Also allows partisan units to rise regardless\
+ of government.\
 ")
 
 [building_noraskan_harbour]

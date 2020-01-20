@@ -942,27 +942,27 @@ helptext = _("Increases per-tile production by 25%.")
 
 [advance_evocation]
 name     = _("Evocation")
-req1     = "Magic"
+req1     = "Spellcasting"
 req2     = "None"
 flags    = ""
 graphic  = "a.mysticism"
 graphic_alt = "-"
-cost     = 20
+cost     = 30
 helptext = _("Increases production by 10%.")
 
 [advance_sorcery]
 name     = _("Sorcery")
-req1     = "Magic"
+req1     = "Spellcasting"
 req2     = "None"
 flags    = ""
 graphic  = "a.mysticism"
 graphic_alt = "-"
-cost     = 20
+cost     = 30
 helptext = _("Increases per-tile production of worked tiles by 1.")
 
 [advance_arcana]
 name     = _("Arcana")
-req1     = "Spellcasting"
+req1     = "Evocation"
 req2     = "Sorcery"
 flags    = ""
 graphic  = "a.mysticism"
@@ -1204,6 +1204,15 @@ Makes all 'beast' units' move speed increase\
  which stacks with other effects of the\
  same nature. Their upkeep becomes free.\
 ")
+
+[advance_pioneering]
+name     = _("Pioneering")
+req1     = "Feral Domestication"
+req2     = "Seafaring"
+flags    = ""
+graphic  = "a.map_making"
+graphic_alt = "-"
+cost     = 80
 
 [advance_the_horde]
 name     = _("The Horde")

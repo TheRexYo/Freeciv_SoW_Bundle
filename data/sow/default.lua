@@ -18,9 +18,10 @@
 -- Get gold from entering a hut.
 function _deflua_hut_get_gold(unit, gold)
   local owner = unit.owner
-
-  notify.event(owner, unit.tile, E.HUT_GOLD, PL_("You found %d gold.",
-                                                 "You found %d gold.", gold),
+  local utype = unit.utype
+  local uname = utype:rule_name()
+  notify.event(owner, unit.tile, E.HUT_GOLD, PL_("Your " .. uname .. " found %d gold.",
+                                                 "Your " .. uname .. " found %d gold.", gold),
                gold)
   owner:change_gold(gold)
 end
