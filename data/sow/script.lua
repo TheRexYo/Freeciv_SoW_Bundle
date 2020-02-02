@@ -170,6 +170,10 @@ function building_built_callback(type, city)
   if type:rule_name() == "Eye Of The Gods" then
 		notify.all("The power of divinity \nblankets the land...")
   end
+  if type:rule_name() == "Temple Aquae" then
+		create_player_unit_of_type(city.owner, city.tile, "Leviathan", 0, city, 0)
+		notify.all("The Leviathan awakens...")
+  end
   -- continue processing
   return false
 end

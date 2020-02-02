@@ -4872,3 +4872,45 @@ Exodii Drones are incredibly efficient spy robots\
  units. Combined, these features make them perfect for\
  reconaissance.\
 ")
+
+
+[unit_leviathan]
+name          = _("Leviathan")
+class         = "Sea"
+tech_req      = "None"
+obsolete_by   = "None"
+graphic       = "u.dragoons"
+graphic_alt   = "u.generic"
+sound_move    = "m_dragoons"
+sound_move_alt = "m_generic"
+sound_fight   = "f_dragoons"
+sound_fight_alt = "f_generic"
+build_cost    = 0
+pop_cost      = 0
+attack        = 60
+defense       = 60
+hitpoints     = 200
+firepower     = 1
+move_rate     = 1
+vision_radius_sq = 10
+transport_cap = 0
+fuel          = 0
+uk_happy      = 0
+uk_shield     = 0
+uk_food       = 10
+uk_gold       = 0
+flags         = "Beast", "NoBuild"
+targets       = "Air", "Helicopter", "Flier"
+roles         = ""
+helptext      = _("\
+Leviathan is a beast spoken of only in legend.\
+ It is said that this monster is nearly unkillable,\
+ with the ability to create lightning storms of such\
+ ferocity that even dragons are vulnerable. Its very\
+ presence is enough to cause the oceans to rise, and\
+ its body is so hot that its breath can light the sea\
+ aflame. It is a beast that bows to no man, for only the\
+ gods can control its anger.\
+")
+	
+; Add nothing below this line.

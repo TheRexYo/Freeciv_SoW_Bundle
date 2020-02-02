@@ -3236,6 +3236,14 @@ reqs	=
     { "type", "name", "range"
       "Building", "Temple Desolus", "City"
     }
+	
+[effect_temple_aquae_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Temple Aquae", "City"
+    }
 
 [effect_eye_of_the_gods_culture]
 type    = "History"
@@ -3244,7 +3252,7 @@ reqs	=
     { "type", "name", "range"
       "Building", "Eye Of The Gods", "City"
     }
-	
+
 [effect_calendar_base]
 type    = "Turn_Years"
 value   = 50

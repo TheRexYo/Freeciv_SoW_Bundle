@@ -140,6 +140,7 @@ default_nationset = "all"
 ; See doc/README.nations for information on how to
 ; create nation rulesets, including style guidelines.
 
+*include "sow/nation/atlantean.ruleset"
 *include "sow/nation/imperian.ruleset"
 *include "sow/nation/kthii.ruleset"
 *include "sow/nation/mesyptian.ruleset"
@@ -148,6 +149,7 @@ default_nationset = "all"
 *include "sow/nation/skyfolk.ruleset"
 *include "sow/nation/wasteraider.ruleset"
 *include "sow/nation/zegrek.ruleset"
+*include "sow/nation/zhinese.ruleset"
 
 *include "sow/extendednationlist.ruleset"
 ;Don't add or remove anything beneath this point!

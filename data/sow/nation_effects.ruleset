@@ -87,8 +87,8 @@ reqs    =
 type    = "Output_Bonus"
 value   = 25
 reqs    =
-    { "type", "name", "range"
-      "Nation", "Wasteraider", "Player"
+    { "type", "name", "range", "present"
+      "Nation", "Wasteraider", "Player", TRUE
 	  "OutputType", "Science", "Local", FALSE
     }
 

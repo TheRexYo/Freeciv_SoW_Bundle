@@ -18,7 +18,7 @@ options="+Freeciv-2.6-ruleset"
 [ruledit]
 
 ; Which file to read description in from.
-description_file = "civ2civ3/README.civ2civ3"
+description_file = "sow/README.sow"
 
 [about]
 ; Ruleset name
@@ -29,27 +29,24 @@ name = _("SoW ruleset")
 
 ; Summary of the ruleset
 ; /* TRANS: In the client, this is displayed alongside the contents of
-;    README.civ2civ3, which are not localized. */
+;    README.sow, which are not localized. */
 summary = _("\
-You are playing Freeciv with civ2civ3 rules:\
+You are playing Freeciv with Son of War rules:\
 \n\n\
 Gameplay more similar to civ3, keeping the combat system from civ2.\
 \n\n\
-Adapted for single player, with AI less aggressive at start,\
- but more challenging at the end.\
-\n\n\
-The differences from the classic ruleset are listed in full in\
- README.civ2civ3.\
+The differences from the Civ2Civ3 ruleset are listed in full in\
+ README.sow.\
 ")
 
 ; Detailed description
 ; When updating this, update also desciption_file in [ruledit] section to match
-description = *civ2civ3/README.civ2civ3*
+description = *sow/README.sow*
 
 [tileset]
 ; Clients that support the feature will suggest
 ; using sowhex tileset with this ruleset.
-preferred = "sowhex"
+preferred = "isow"
 
 [soundset]
 ; If preferred soundset is set, clients that support the feature will suggest
@@ -472,7 +469,7 @@ action = "Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Military", "Local"
-      "DiplRel", "War", "Local"
+      "DiplRel", "Is foreign", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -486,7 +483,7 @@ action = "Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Siege", "Local"
-      "DiplRel",  "War", "Local"
+      "DiplRel", "Is foreign", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -500,7 +497,7 @@ action = "Poison City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Military", "Local"
-      "DiplRel",  "War", "Local"
+      "DiplRel", "Is foreign", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -509,38 +506,6 @@ target_reqs    =
       "Building", "City Walls", "City", FALSE
     }
 
-[actionenabler_ravage_the_sky_traitors]
-action = "Poison City"
-actor_reqs    =
-    { "type",         "name",          "range"
-      "Nation",       "Wasteraider",   "Player"
-      "UnitFlag",     "Military",      "Local"
-      "DiplRel",      "Is foreign",    "Local"
-      "UnitState",    "OnLivableTile", "Local"
-      "MinMoveFrags", "1",             "Local"
-    }
-target_reqs    =
-    { "type",   "name", "range", "present"
-		"Building", "City Walls", "City", FALSE
-		"Nation", "Skyfolk", "Player", TRUE
-    }
-	
-[actionenabler_purge_the_wicked]
-action = "Poison City"
-actor_reqs    =
-    { "type",         "name",          "range"
-      "Nation",       "Skyfolk",       "Player"
-      "UnitFlag",     "Military",      "Local"
-      "DiplRel",      "Is foreign",    "Local"
-      "UnitState",    "OnLivableTile", "Local"
-      "MinMoveFrags", "1",             "Local"
-    }
-target_reqs    =
-    { "type",   "name", "range", "present"
-		"Building", "City Walls", "City", FALSE
-		"Nation", "Wasteraider", "Player", TRUE
-    }
-	
 [borders]
 ; Base border radius from city.
 radius_sq_city = 5
@@ -603,7 +568,7 @@ tech_leakage = "Embassies"
 tech_upkeep_style = "Cities"
 
 ; upkeep cost is divided by this value
-tech_upkeep_divider = 6000
+tech_upkeep_divider = 250; 6000 by default
 
 ; Method of selecting techs given for free
 ; "Goal"     - Towards player`s goal, random if no goal
@@ -625,7 +590,7 @@ migration_pml = 50
 
 [calendar]
 ; Year in the beginning of the game
-start_year = -4000
+start_year = -10000
 
 ; Year 1 instead of 0.
 skip_year_0 = TRUE
@@ -642,10 +607,10 @@ fragments = 0
 ; ...
 
 ; What labels are used for positive and negative years.
-; /* TRANS: year label (New Era) */
-positive_label = _("NE")
 ; /* TRANS: year label (Before Day of Ragnarak) */
-negative_label = _("BDR")
+positive_label = _("BDR")
+; /* TRANS: year label (New Era) */
+negative_label = _("NE")
 
 ; /* <-- avoid gettext warnings
 ;
@@ -666,116 +631,13 @@ negative_label = _("BDR")
 ;
 ; */ <-- avoid gettext warnings
 
-;[disaster_gadura]
-;name           = _("Gadura")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Ocean", "Local", TRUE
-;		"Terrain", "Desert", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "DestroyBuilding", "EmptyProdStock", "ReducePopulation", "EmptyFoodStock"
-
-;[disaster_zadura]
-;name           = _("Zadura")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Ocean", "Adjacent", TRUE
-;		"Terrain", "Desert", "Local", TRUE
-;    }
-;frequency      = 10
-;effects        = "DestroyBuilding", "EmptyProdStock", "ReducePopulation", "EmptyFoodStock"
-
-[disaster_tsunami]
-name           = _("Tsunami")
-reqs           =
-    { "type", "name", "range", "present"
-		"Terrain", "Ocean", "Adjacent", TRUE
-    }
-frequency      = 50
-effects        = "DestroyBuilding", "EmptyFoodStock"
-
-;[disaster_frigityr]
-;name           = _("Frigityr")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Glacier", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "ReducePopDestroy", "ReducePopulation"
-
-;[disaster_fyrfuri]
-;name           = _("Fyrfuri")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Tundra", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "EmptyProdStock", "EmptyFoodStock"
-
-;[disaster_miasma_plume]
-;name           = _("Miasma Plume")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Swamp", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "Pollution", "EmptyFoodStock"
-
-;[disaster_blood_rain]
-;name           = _("Blood Rain")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Blood Spires", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "ReducePopulation", "EmptyFoodStock"
-
-;[disaster_predation]
-;name           = _("Predation")
-;reqs           =
-;    { "type", "name", "range", "present"
-;		"Terrain", "Verdant", "Adjacent", TRUE
-;		"Tech", "Coexistence", "Player", FALSE
-;    }
-;frequency      = 10
-;effects        = "ReducePopDestroy", "EmptyFoodStock"
-
-;[disaster_magma_plume]
-;name           = _("Magma Plume")
-;reqs           =
-;    { "type", "name", "range", "present"
-;      "Terrain", "Lava Flats", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "ReducePopDestroy", "EmptyProdStock"
-
-[disaster_eruption]
-name           = _("Eruption")
-reqs           =
-    { "type", "name", "range", "present"
-      "Terrain", "Mountains", "Adjacent", TRUE
-    }
-frequency      = 25
-effects        = "ReducePopDestroy", "DestroyBuilding"
-
-;[disaster_desolate_wave]
-;name           = _("Desolate Wave")
-;reqs           =
-;    { "type", "name", "range", "present"
-;      "Terrain", "Wastes", "Adjacent", TRUE
-;    }
-;frequency      = 10
-;effects        = "ReducePopDestroy", "Fallout"
-
 [disaster_monster_attack]
 name           = _("Monster Attack")
 reqs           =
-    { "type", "name", "range", "present"
-		"Tech", "Monstrous Companionship", "Player", FALSE
+    { "type", "name", "range"
     }
-frequency      = 25
-effects        = "ReducePopDestroy", "DestroyBuilding"
+frequency      = 100
+effects        = "ReducePopDestroy"
 
 [disaster_earthquake]
 name           = _("Earthquake")
