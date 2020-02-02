@@ -472,7 +472,7 @@ action = "Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Military", "Local"
-      "DiplRel", "Is foreign", "Local"
+      "DiplRel", "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -486,7 +486,7 @@ action = "Sabotage City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Siege", "Local"
-      "DiplRel", "Is foreign", "Local"
+      "DiplRel",  "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -500,7 +500,7 @@ action = "Poison City"
 actor_reqs    =
     { "type",   "name", "range"
       "UnitFlag", "Military", "Local"
-      "DiplRel", "Is foreign", "Local"
+      "DiplRel",  "War", "Local"
       "UnitState", "OnLivableTile", "Local"
       "MinMoveFrags", "1", "Local"
     }
@@ -509,6 +509,38 @@ target_reqs    =
       "Building", "City Walls", "City", FALSE
     }
 
+[actionenabler_ravage_the_sky_traitors]
+action = "Poison City"
+actor_reqs    =
+    { "type",         "name",          "range"
+      "Nation",       "Wasteraider",   "Player"
+      "UnitFlag",     "Military",      "Local"
+      "DiplRel",      "Is foreign",    "Local"
+      "UnitState",    "OnLivableTile", "Local"
+      "MinMoveFrags", "1",             "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+		"Building", "City Walls", "City", FALSE
+		"Nation", "Skyfolk", "Player", TRUE
+    }
+	
+[actionenabler_purge_the_wicked]
+action = "Poison City"
+actor_reqs    =
+    { "type",         "name",          "range"
+      "Nation",       "Skyfolk",       "Player"
+      "UnitFlag",     "Military",      "Local"
+      "DiplRel",      "Is foreign",    "Local"
+      "UnitState",    "OnLivableTile", "Local"
+      "MinMoveFrags", "1",             "Local"
+    }
+target_reqs    =
+    { "type",   "name", "range", "present"
+		"Building", "City Walls", "City", FALSE
+		"Nation", "Wasteraider", "Player", TRUE
+    }
+	
 [borders]
 ; Base border radius from city.
 radius_sq_city = 5
@@ -548,7 +580,7 @@ tech_cost_style = "Classic+"
 ; Base research cost. Used in tech cost styles where tech cost is generated.
 ; In other words: used everywhere unless the cost of *all* techs are
 ; specified and the tech cost style is "Experimental+" or "Classic+".
-base_tech_cost   = 20
+base_tech_cost   = 10
 
 ; Technology leak from other civilizations
 ; "None"           - No reduction of the technology cost.
@@ -610,10 +642,10 @@ fragments = 0
 ; ...
 
 ; What labels are used for positive and negative years.
-; /* TRANS: year label (Common Era) */
-positive_label = _("CE")
-; /* TRANS: year label (Before Common Era) */
-negative_label = _("BCE")
+; /* TRANS: year label (New Era) */
+positive_label = _("NE")
+; /* TRANS: year label (Before Day of Ragnarak) */
+negative_label = _("BDR")
 
 ; /* <-- avoid gettext warnings
 ;
@@ -634,13 +666,116 @@ negative_label = _("BCE")
 ;
 ; */ <-- avoid gettext warnings
 
+;[disaster_gadura]
+;name           = _("Gadura")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Ocean", "Local", TRUE
+;		"Terrain", "Desert", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "DestroyBuilding", "EmptyProdStock", "ReducePopulation", "EmptyFoodStock"
+
+;[disaster_zadura]
+;name           = _("Zadura")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Ocean", "Adjacent", TRUE
+;		"Terrain", "Desert", "Local", TRUE
+;    }
+;frequency      = 10
+;effects        = "DestroyBuilding", "EmptyProdStock", "ReducePopulation", "EmptyFoodStock"
+
+[disaster_tsunami]
+name           = _("Tsunami")
+reqs           =
+    { "type", "name", "range", "present"
+		"Terrain", "Ocean", "Adjacent", TRUE
+    }
+frequency      = 50
+effects        = "DestroyBuilding", "EmptyFoodStock"
+
+;[disaster_frigityr]
+;name           = _("Frigityr")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Glacier", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "ReducePopDestroy", "ReducePopulation"
+
+;[disaster_fyrfuri]
+;name           = _("Fyrfuri")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Tundra", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "EmptyProdStock", "EmptyFoodStock"
+
+;[disaster_miasma_plume]
+;name           = _("Miasma Plume")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Swamp", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "Pollution", "EmptyFoodStock"
+
+;[disaster_blood_rain]
+;name           = _("Blood Rain")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Blood Spires", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "ReducePopulation", "EmptyFoodStock"
+
+;[disaster_predation]
+;name           = _("Predation")
+;reqs           =
+;    { "type", "name", "range", "present"
+;		"Terrain", "Verdant", "Adjacent", TRUE
+;		"Tech", "Coexistence", "Player", FALSE
+;    }
+;frequency      = 10
+;effects        = "ReducePopDestroy", "EmptyFoodStock"
+
+;[disaster_magma_plume]
+;name           = _("Magma Plume")
+;reqs           =
+;    { "type", "name", "range", "present"
+;      "Terrain", "Lava Flats", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "ReducePopDestroy", "EmptyProdStock"
+
+[disaster_eruption]
+name           = _("Eruption")
+reqs           =
+    { "type", "name", "range", "present"
+      "Terrain", "Mountains", "Adjacent", TRUE
+    }
+frequency      = 25
+effects        = "ReducePopDestroy", "DestroyBuilding"
+
+;[disaster_desolate_wave]
+;name           = _("Desolate Wave")
+;reqs           =
+;    { "type", "name", "range", "present"
+;      "Terrain", "Wastes", "Adjacent", TRUE
+;    }
+;frequency      = 10
+;effects        = "ReducePopDestroy", "Fallout"
+
 [disaster_monster_attack]
 name           = _("Monster Attack")
 reqs           =
-    { "type", "name", "range"
+    { "type", "name", "range", "present"
+		"Tech", "Monstrous Companionship", "Player", FALSE
     }
-frequency      = 100
-effects        = "ReducePopDestroy"
+frequency      = 25
+effects        = "ReducePopDestroy", "DestroyBuilding"
 
 [disaster_earthquake]
 name           = _("Earthquake")

@@ -52,7 +52,7 @@ tiles = { "row", "column", "tag"
   1,  7, "unit.vet_8"
   1,  8, "unit.vet_9"
   1,  9, "unit.vet_10"
-  1, 10, "unit.vet_11"
+  1, 10, "unit.vel1"
 
 ; Unit special info
 

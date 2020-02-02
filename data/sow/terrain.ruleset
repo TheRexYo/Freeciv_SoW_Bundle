@@ -306,7 +306,7 @@ transform_time       = 36
 pillage_time         = 1
 clean_pollution_time = 3
 clean_fallout_time   = 3
-animal               = "None"
+animal               = "Seahound Pack"
 warmer_wetter_result = "no"
 warmer_drier_result  = "no"
 cooler_wetter_result = "Glacier"
@@ -655,12 +655,12 @@ graphic              = "jungle"
 graphic_alt          = "-"
 identifier           = "🌴"
 class                = "Land"
-movement_cost        = 2
-defense_bonus        = 25
-food                 = 1
-shield               = 1
+movement_cost        = 4
+defense_bonus        = 50
+food                 = 2
+shield               = 2
 trade                = 0
-resources            = "Gems", "Fruit"
+resources            = "Fruit"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
@@ -894,8 +894,8 @@ class                = "Land"
 movement_cost        = 3
 defense_bonus        = 0
 food                 = 0
-shield               = 3
-trade                = 0
+shield               = 2
+trade                = 2
 resources            = "Oil", "Coal", "Iron", "Gold"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0
@@ -930,7 +930,8 @@ color.g              = 100
 color.b              = 0
 helptext             = _("\
 Wastes are regions of extreme desolation, making agriculture and\
- trade very difficult.
+ trade very difficult, though the inorganic resources there are quite\
+ plentiful.\
 "), _("\
 Units in this type of terrain lose 3 HP\
  each turn, unless they're in a city center.\
@@ -980,7 +981,7 @@ helptext             = _("\
 Blood Spires are a form of Wasteland\
  terrain known for the strange, red liquid\
  emmitted by the rocky spires that dominate\
- the landscape. Sadly, this liquid is inedible,\ 
+ the landscape. Sadly, this liquid is inedible,\
  and thus cannot be used as a source of water.\
 "), _("\
 Units in this type of terrain lose 3 HP\
@@ -996,8 +997,8 @@ class                = "Land"
 movement_cost        = 3
 defense_bonus        = 0
 food                 = 0
-shield               = 3
-trade                = 0
+shield               = 0
+trade                = 3
 resources            = "Iron", "Gold"
 road_food_incr_pct   = 0
 road_shield_incr_pct = 0

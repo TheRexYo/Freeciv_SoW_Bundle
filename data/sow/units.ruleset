@@ -612,7 +612,7 @@ veteran_raise_chance = 0
 veteran_work_raise_chance = 0
 veteran_power_fact = 100
 veteran_move_bonus = 0
-roles         = "Settlers", "WorkerStartUnit"
+roles         = "Settlers", "WorkerStartUnit", "Hut"
 helptext      = _("\
 Workers have the ability to improve terrain tiles. See the help on \
 Terrain and Terrain Alterations for the effects of their actions.\
@@ -741,7 +741,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild", "BarbarianBuild", "Partisan", "Hut"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest military unit.\
@@ -777,7 +777,7 @@ bonuses       =
      "WeakMelee", "DefenseDivider", 1
    }
 flags         = "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "FirstBuild", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "FirstBuild", "Partisan", "Hut"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest offensive unit.\
@@ -813,7 +813,7 @@ bonuses       =
      "Mounted", "DefenseMultiplier", 1
    }
 flags         = "Capturer", "Military"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
+roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianBuild", "FirstBuild", "Partisan", "Hut"
 helptext      = _("\
 This unit may be built from the start of the game.  It is the\
  weakest defensive unit.\
@@ -850,7 +850,7 @@ bonuses       =
 	 "WeakMelee", "DefenseDivider", 1
    }
 flags         = "Capturer", "Military"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan", "Hut", "BarbarianBuildTech"
 helptext      = _("\
 The Phalanx is armored infantry, suitable for defending your cities\
  and capturing your enemies'.\
@@ -959,7 +959,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "WeakMelee", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "Hut", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "Hut", "Partisan"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value.\
@@ -995,7 +995,7 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Marines", "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuildTech", "BarbarianSea", "Partisan", "HutTech"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
  units with an excellent offensive value.\
@@ -1031,7 +1031,7 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Marines", "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "Partisan"
 helptext      = _("\
 Rhonan legions are enhanced relatives of the standard\
  legion that possess greater defensive prowess but an\
@@ -1068,7 +1068,7 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Marines", "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea", "Partisan"
+roles         = "DefendOk", "DefendOkStartUnit", "Partisan", "HutTech"
 helptext      = _("\
 Magical weaponry makes the Legion far more efficient.\
 ")
@@ -1104,7 +1104,7 @@ bonuses       =
 	"WeakMelee", "DefenseDivider", 1
    }
 flags         = "Marines", "Capturer", "Military"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuild", "BarbarianSea"
+roles         = "DefendOk"
 helptext      = _("\
 Divine Legions are godlike\
  variants of the normal Legion\
@@ -1142,7 +1142,7 @@ bonuses       =
    { "flag", "type", "value"
      "Mounted", "DefenseMultiplier", 1
    }
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "Partisan", "HutTech"
 helptext      = _("\
 Equipped with long pikes, Pikemen replaces Phalanx\
  as the preferred city defender.\
@@ -1569,7 +1569,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer", "Mounted", "Military"
-roles         = "AttackFastStartUnit"
+roles         = "AttackFastStartUnit", "HutTech"
 helptext      = _("\
 Chariots are horse-pulled war wagons. They have a stronger attack than \
 Horsemen, but their speed comes at a cost: they are more expensive \
@@ -1610,7 +1610,7 @@ veteran_raise_chance      = 25, 17, 10, 0
 veteran_work_raise_chance = 3, 2, 1, 0
 veteran_power_fact        = 100, 125, 150, 175
 veteran_move_bonus        = 0, 0, 1, 1
-roles         = "Settlers", "WorkerStartUnit"
+roles         = "Settlers", "WorkerStartUnit", "Hut"
 helptext      = _("\
 Cattle are beasts of burden well suited\
  for harder tasks than the average man.\
@@ -3090,8 +3090,8 @@ sound_fight   = "f_leader"
 sound_fight_alt = "f_generic"
 build_cost    = 10
 pop_cost      = 0
-attack        = 0
-defense       = 2
+attack        = 10
+defense       = 10
 hitpoints     = 20
 firepower     = 1
 move_rate     = 2
@@ -3218,6 +3218,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
+cargo         = "Land", "Small Land"
 flags         = "IgZOC", "AirAttacker", "IgTer"
 targets       = "Air", "Helicopter", "Flier"
 roles         = "AttackFastStartUnit", "Hunter"
@@ -3385,8 +3386,8 @@ sound_fight   = "f_dragoons"
 sound_fight_alt = "f_generic"
 build_cost    = 50
 pop_cost      = 0
-attack        = 10
-defense       = 2
+attack        = 6
+defense       = 4
 hitpoints     = 20
 firepower     = 1
 move_rate     = 4
@@ -3455,8 +3456,8 @@ sound_fight   = "f_dragoons"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 15
-defense       = 3
+attack        = 9
+defense       = 6
 hitpoints     = 20
 firepower     = 1
 move_rate     = 6
@@ -3505,6 +3506,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 2
+cargo         = "Land", "Small Land"
 bonuses       =
    { "flag", "type", "value"
 	"AirAttacker", "DefenseMultiplier", 1
@@ -3514,7 +3516,7 @@ targets       = "Air", "Helicopter", "Flier"
 roles         = ""
 helptext      = _("\
 Stronger but more costly variants of the standard\
- skyship. Possess a defense bonus against other\ 
+ skyship. Possess a defense bonus against other\
  air-attacking units.\
 ")
 
@@ -3532,7 +3534,7 @@ sound_fight   = "f_dragoons"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 5
+attack        = 3
 defense       = 3
 hitpoints     = 25
 firepower     = 1
@@ -3574,7 +3576,7 @@ pop_cost      = 0
 attack        = 40
 defense       = 40
 hitpoints     = 30
-firepower     = 1
+firepower     = 5
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -3583,7 +3585,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "CityBuster", "OneAttack", "Pyro", "Military"
+flags         = "CityBuster", "OneAttack", "Pyro", "Siege"
 bonuses       =
    { "flag", "type", "value"
      "Pyro", "DefenseMultiplier", 1
@@ -3624,7 +3626,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "OneAttack", "Military"
+flags         = "OneAttack", "Siege"
 bonuses       =
    { "flag", "type", "value"
      "Pyro", "DefenseMultiplier", 1
@@ -3655,7 +3657,7 @@ pop_cost      = 0
 attack        = 10
 defense       = 5
 hitpoints     = 30
-firepower     = 1
+firepower     = 5
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -3664,14 +3666,14 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "OneAttack", "Military"
+flags         = "OneAttack", "Siege"
 targets       = "Air", "Helicopter", "Flier"
 roles         = "AttackStrongStartUnit"
 bombard_rate = 10
 bonuses       =
    { "flag", "type", "value"
-     "Pyro", "DefenseMultiplier", 1
-	"AirAttacker", "DefenseDivider", 1
+		"Pyro", "DefenseMultiplier", 1
+		"AirAttacker", "DefenseDivider", 1
    }
 helptext      = _("\
 The Skybreaker is a powerful seige weapon\
@@ -3858,7 +3860,7 @@ bonuses       =
 roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Cryoscorpis are giant scorpions with an\
- innate resistance to cold. They also\ 
+ innate resistance to cold. They also\
  possess a thick exoskeleton that makes\
  attacking them very difficult.\
 ")
@@ -3894,7 +3896,7 @@ helptext      = _("\
 Tame or domestic wolves\
  are a cost-efficient means\
  of hunting down and destroying\
- enemy units. They are extremely\ 
+ enemy units. They are extremely\
  cost-efficient hunters, but lack\
  defenses.\
 ")
@@ -4065,6 +4067,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Land", "Small Land"
 flags         = "BadCityDefender"
 roles         = "Hunter", "Ferryboat"
 helptext      = _("\
@@ -4093,12 +4096,13 @@ hitpoints     = 20
 firepower     = 1
 move_rate     = 5
 vision_radius_sq = 2
-transport_cap = 0
+transport_cap = 1
 fuel          = 0
 uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Land", "Small Land"
 flags         = "BadCityDefender"
 roles         = "Hunter"
 helptext      = _("\
@@ -4136,6 +4140,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+cargo         = "Land", "Small Land"
 flags         = "BadCityDefender"
 roles         = "Hunter", "Ferryboat"
 helptext      = _("\
@@ -4173,8 +4178,7 @@ uk_gold       = 1
 flags         = "WeakMelee"
 roles         = "AttackStrongStartUnit", "DefendGood"
 helptext      = _("\
-Magi are potent casters that\
- use their magic in war.\
+Magi are potent casters that use their magic in war.\
 ")
 
 [unit_spellcasters]
@@ -4305,9 +4309,8 @@ uk_gold       = 1
 flags         = "WeakMelee"
 roles         = "AttackStrongStartUnit", "DefendGood"
 helptext      = _("\
-Arcanists are upgraded sorcerors that have\
- learned to use Arcane techniques in their\
- magic.\
+Arcanists are upgraded sorcerors and evokers that have\
+ learned to use Arcane techniques in their magic.\
 ")
 
 [unit_wizards]
@@ -4719,7 +4722,6 @@ Deathworms are almost supernaturally\
  burrowing speed.\
 ")
 
-
 [unit_deathworm_riders]
 name          = _("Deathworm Riders")
 class         = "Burrowing"
@@ -4752,7 +4754,7 @@ roles         = "Hunter"
 helptext      = _("\
 When mounted, deathworms benefit from\
  extra defense and the ability to capture\
- certain targets rather than outright kill 
+ certain targets rather than outright kill\
  them due to having an intelligent rider.\
 ")
 
@@ -4786,7 +4788,7 @@ bonuses       =
    { "flag", "type", "value"
 	"WeakMelee", "DefenseDivider", 1
    }
-flags         = "Marines", "Capturer"
+flags         = "Marines", "Capturer", "Military"
 roles         = "DefendOk", "BarbarianBuild", "BarbarianSea", "Partisan"
 helptext      = _("\
 Laserbladers are standard Exodii swordsman\
@@ -4808,8 +4810,8 @@ sound_fight   = "f_paratroopers"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 40
-defense       = 5
+attack        = 25
+defense       = 20
 hitpoints     = 5
 firepower     = 1
 move_rate     = 5
@@ -4822,7 +4824,7 @@ uk_food       = 1
 uk_gold       = 1
 embarks       = "Helicopter"
 disembarks    = "Helicopter"
-flags         = "Paratroopers", "Capturer", "IgTer"
+flags         = "Paratroopers", "Capturer", "IgTer", "Military"
 roles         = "Hunter"
 helptext      = _("\
 Warpers are enhanced Paratroopers that teleport to their destination,\

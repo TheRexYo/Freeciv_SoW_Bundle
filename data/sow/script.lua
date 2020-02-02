@@ -28,6 +28,13 @@ exodiispawnlist[1][1] = "Exodii Laserbladers"
 exodiispawnlist[2][1] = "Exodii Laserbladers"
 exodiispawnlist[2][2] = "Exodii Warpers"
 -- End of Vanguard Exodii Spawn List --
+local beasts = {}
+beasts["Desert"] = {}
+beasts["Mountain"] = {}
+-- Start of Beast Spawn List
+beasts["Desert"][1] = "Deathworm"
+beasts["Mountain"][1] = "Dragon"
+-- End of Beast Spawn List
 messages = {}
 -- Start of Messages --
 messages["Aetherian"] = "\
@@ -229,7 +236,7 @@ end
 
 function CreateExodiiVanguardUnits(exodii, tile, moves, level)
 	if exodii == nil then
-		exodii = GetNation("Exodii")
+		exodii = GetNationsPlayer("Exodii")
 	end
 	homecity = GetCityFromPlayer(exodii, "The Breach")
 	local unitname = exodiispawnlist[1][math.random(1,#exodiispawnlist[1])]
@@ -252,9 +259,10 @@ function GetCityFromPlayer(player, name)
 	end
 	return nil
 end
+
 function CreateExodiiUnits(exodii, tile, homecity, moves, level)
 	if exodii == nil then
-		exodii = GetNation("Exodii")
+		exodii = GetNationsPlayer("Exodii")
 	end
 	if homecity == nil then
 		homecity = GetCityFromPlayer(exodii, "The Breach")
@@ -274,7 +282,7 @@ end
 function IsSuitableBreachingPoint(tile, exodii)
 	print("Running function: 'IsSuitableBreachingPoint()'")
 	if exodii == nil then
-		exodii = GetNation("Exodii")
+		exodii = GetNationsPlayer("Exodii")
 	end
 	local terrain = tile.terrain
 	local terrain_name = terrain:rule_name()
@@ -300,16 +308,23 @@ end
 
 function SpawnExodii(exodii)
 	if exodii == nil then
-		exodii = GetNation("Exodii")
+		exodii = GetNationsPlayer("Exodii")
 	end
-	local oldtile = find.tile(0,0)
+	local tiles = {}
+	--local oldtile = find.tile(0,0)
 	local newtile
-	for tile in oldtile:square_iterate(1) do
-		local check = IsSuitableBreachingPoint(tile, exodii)
-		if check == true then
-			newtile = tile
+	for oldtile in whole_map_iterate() do
+		local terr = oldtile.terrain
+		local tname = terr:rule_name()
+
+		for tile in oldtile:square_iterate(1) do
+			local check = IsSuitableBreachingPoint(tile, exodii)
+			if check == true then
+				table.insert(tiles, oldtile)
+			end
 		end
 	end
+	newtile = tiles[math.random(#tiles)]
 	local city = edit.create_city(exodii, newtile, "The Breach")
 	for player in players_iterate() do
 		local nation = player.nation
@@ -378,6 +393,22 @@ function surrounded_by(tile, terrain_name)
     end
   end
   return true
+end
+
+function CreateBeastUnits(tile)
+	local beast = GetNationsPlayer("Beast")
+    local terr = tile.terrain
+    local tname = terr:rule_name()
+	local unitname
+	if beasts[tname] ~= nil then
+		unitname = beasts[tname][math.random(#beasts[tname])]
+	end
+	local unittype
+	if unitname ~= nil then
+		unittype = find.unit_type(unitname)
+	end
+	local unit = edit.create_unit(beast, tile, unittype, 0, 0)
+	--local unit = edit.create_unit(beast, tile, unittype, 0, nil, 0)
 end
 
 -- Add random labels to the map.
@@ -496,10 +527,11 @@ function place_map_labels()
   for place in whole_map_iterate() do
     local terr = place.terrain
     local tname = terr:rule_name()
-
+	
     if place:has_extra("River") then
       selected_river = selected_river - 1
       if selected_river == 0 then
+		CreateBeastUnits(place)
         if tname == "Hills" then
           place:set_label(_("Grand Canyon"))
         elseif tname == "Mountains" then
@@ -515,6 +547,7 @@ function place_map_labels()
     elseif tname == "Deep Ocean" then
       selected_deep = selected_deep - 1
       if selected_deep == 0 then
+		CreateBeastUnits(place)
         if random(1, 100) <= 50 then
           place:set_label(_("Deep Trench"))
         else
@@ -524,6 +557,7 @@ function place_map_labels()
     elseif tname == "Ocean" then
       selected_ocean = selected_ocean - 1
       if selected_ocean == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Ocean") then
           place:set_label(_("Atoll Chain"))
         elseif adjacent_to(place, "Deep Ocean") then
@@ -536,6 +570,7 @@ function place_map_labels()
     elseif tname == "Lake" then
       selected_lake = selected_lake - 1
       if selected_lake == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Lake") then
           place:set_label(_("Great Lakes"))
         elseif not adjacent_to(place, "Lake") then
@@ -548,6 +583,7 @@ function place_map_labels()
     elseif tname == "Swamp" then
       selected_swamp = selected_swamp - 1
       if selected_swamp == 0 then
+		CreateBeastUnits(place)
         if not adjacent_to(place, "Swamp") then
           place:set_label(_("Grand Prismatic Spring"))
         elseif adjacent_to(place, "Ocean") then
@@ -559,6 +595,7 @@ function place_map_labels()
     elseif tname == "Glacier" then
       selected_glacier = selected_glacier - 1
       if selected_glacier == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Glacier") then
           place:set_label(_("Ice Sheet"))
         elseif not adjacent_to(place, "Glacier") then
@@ -572,11 +609,13 @@ function place_map_labels()
     elseif tname == "Tundra" then
       selected_tundra = selected_tundra - 1
       if selected_tundra == 0 then
-          place:set_label(_("Geothermal Area"))
+			CreateBeastUnits(place)
+			place:set_label(_("Geothermal Area"))
       end
     elseif tname == "Desert" then
       selected_desert = selected_desert - 1
       if selected_desert == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Desert") then
           place:set_label(_("Sand Sea"))
         elseif not adjacent_to(place, "Desert") then
@@ -590,6 +629,7 @@ function place_map_labels()
     elseif tname == "Plains" then
       selected_plain = selected_plain - 1
       if selected_plain == 0 then
+		CreateBeastUnits(place)
         if adjacent_to(place, "Ocean") then
           place:set_label(_("Long Beach"))
         elseif random(1, 100) <= 50 then
@@ -601,6 +641,7 @@ function place_map_labels()
     elseif tname == "Grassland" then
       selected_grassland = selected_grassland - 1
       if selected_grassland == 0 then
+		CreateBeastUnits(place)
         if adjacent_to(place, "Ocean") then
           place:set_label(_("White Cliffs"))
         elseif random(1, 100) <= 50 then
@@ -612,6 +653,7 @@ function place_map_labels()
     elseif tname == "Jungle" then
       selected_jungle = selected_jungle - 1
       if selected_jungle == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Jungle") then
           place:set_label(_("Rainforest"))
         elseif adjacent_to(place, "Ocean") then
@@ -623,6 +665,7 @@ function place_map_labels()
     elseif tname == "Forest" then
       selected_forest = selected_forest - 1
       if selected_forest == 0 then
+		CreateBeastUnits(place)
         if adjacent_to(place, "Mountains") then
           place:set_label(_("Stone Forest"))
         elseif random(1, 100) <= 50 then
@@ -634,6 +677,7 @@ function place_map_labels()
     elseif tname == "Hills" then
       selected_hill = selected_hill - 1
       if selected_hill == 0 then
+		CreateBeastUnits(place)
         if not adjacent_to(place, "Hills") then
           if adjacent_to(place, "Mountains") then
             place:set_label(_("Table Mountain"))
@@ -649,6 +693,7 @@ function place_map_labels()
     elseif tname == "Mountains" then
       selected_mountain = selected_mountain - 1
       if selected_mountain == 0 then
+		CreateBeastUnits(place)
         if surrounded_by(place, "Mountains") then
           place:set_label(_("Highest Peak"))
         elseif not adjacent_to(place, "Mountains") then
@@ -667,3 +712,12 @@ function place_map_labels()
 end
 
 signal.connect("map_generated", "place_map_labels")
+
+function action_started_callback(action, actor, target)
+	log.normal(_("%s (rule name: %s) performed by %s on %s"),
+		action:name_translation(),
+		action:rule_name(),
+		actor.owner.nation:plural_translation(),
+		target.owner.nation:plural_translation()
+	)
+end

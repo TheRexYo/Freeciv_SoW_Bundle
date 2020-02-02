@@ -7,7 +7,8 @@ artists = "\
 "
 
 [files]
-music_menu = "stdmusic/CullamBruce-Lockhart--Dawning_Fanfare.ogg"
+music_menu = "sowmusic/Song Of War.ogg"
+;music_menu = "stdmusic/CullamBruce-Lockhart--Dawning_Fanfare.ogg"
 ;music_victory = stdmusic/"Soaring_High.ogg"
 ;music_defeat = "stdmusic/Progressive_Moments.ogg"
 music_skyfolk_peace = "sowmusic/The Last Cry For Peace.ogg"

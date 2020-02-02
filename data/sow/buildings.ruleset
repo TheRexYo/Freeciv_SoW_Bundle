@@ -1686,6 +1686,29 @@ Increases the defense of allied units.\
  of government.\
 ")
 
+[building_heavens_core]
+name		= _("Heaven's Core")
+genus		= "GreatWonder"
+reqs	=
+    { "type", "name", "range"
+      "Tech", "Astronomy", "Player"
+    }
+graphic	= "b.oracle"
+graphic_alt	= "-"
+obsolete_by	=
+    { "type", "name", "range", "survives"
+      "Tech", "Radio", "World"
+    }
+build_cost	= 400
+upkeep	    = 0
+sabotage	= 0
+sound		= "w_oracle"
+sound_alt	= "w_generic"
+helptext	= _("\
+Gives 100% spy resistance to cities and makes them nuke-proof.\
+Also reduces per-city unit upkeep by 1.\
+")
+
 [building_noraskan_harbour]
 name            = _("Noraskan Harbor")
 genus		= "Improvement"

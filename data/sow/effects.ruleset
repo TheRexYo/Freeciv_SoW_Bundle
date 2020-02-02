@@ -3010,14 +3010,30 @@ reqs    =
       "OutputType", "Shield", "Local"
     }
 
-[effect_nephaliths_culture]
-type    = "History"
-value	= 2
-reqs	=
+[effect_heavens_core_1]
+type    = "Nuke_Proof"
+value   = 1
+reqs    =
     { "type", "name", "range"
-      "Building", "Nephaliths", "City"
+      "Building", "Heaven's Core", "Player"
     }
 
+[effect_heavens_core_2]
+type    = "Spy_Resistant"
+value   = 100
+reqs    =
+    { "type", "name", "range"
+      "Building", "Heaven's Core", "Player"
+    }
+	
+[effect_heavens_core_3]
+type    = "Unit_Upkeep_Free_Per_City"
+value   = 1
+reqs    =
+    { "type", "name", "range"
+      "Building", "Heaven's Core", "Player"
+    }
+		
 [effect_temple_verde]
 type    = "Growth_Food"
 value   = 100
@@ -3163,6 +3179,22 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Building", "The Keeper", "Player", TRUE
+    }
+
+[effect_nephaliths_culture]
+type    = "History"
+value	= 2
+reqs	=
+    { "type", "name", "range"
+      "Building", "Nephaliths", "City"
+    }
+	
+[effect_heavens_core_culture]
+type    = "History"
+value	= 3
+reqs	=
+    { "type", "name", "range"
+      "Building", "Heaven's Core", "City"
     }
 	
 [effect_sun_alars_college_of_war_culture]

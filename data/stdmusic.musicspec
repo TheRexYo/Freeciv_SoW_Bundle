@@ -8,9 +8,16 @@ artists = "\
 
 [files]
 music_menu = "stdmusic/CullamBruce-Lockhart--Dawning_Fanfare.ogg"
-;music_victory = ""
-;music_defeat = ""
-
+;music_menu = "stdmusic/CullamBruce-Lockhart--Dawning_Fanfare.ogg"
+;music_victory = stdmusic/"Soaring_High.ogg"
+;music_defeat = "stdmusic/Progressive_Moments.ogg"
+music_skyfolk_combat = "stdmusic/Warborn.ogg"
+music_tribal_peace = "stdmusic/Island_Coconuts.ogg"
+music_tribal_combat = "stdmusic/Tribal_Affair.ogg"
+music_monarchy_peace = "stdmusic/Peaceful_Conclusion.ogg"
+music_monarchy_combat = "stdmusic/King_s_Men.ogg"
+music_exodii_event_peace = "stdmusic/Meteor.ogg"
+music_exodii_event_war = "stdmusic/Thunderstorm.ogg"
 ;music_european_peace = ""
 ;music_european_combat = ""
 ;music_classical_peace = ""
@@ -33,3 +40,4 @@ music_menu = "stdmusic/CullamBruce-Lockhart--Dawning_Fanfare.ogg"
 ;music_modern_combat = ""
 ;music_postmodern_peace = ""
 ;music_postmodern_combat = ""
+

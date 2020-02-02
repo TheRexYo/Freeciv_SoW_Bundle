@@ -121,10 +121,10 @@ hidden=true
 
 allowed_govs =
   "Anarchy", "Despotism", "Monarchy", "Communism", "Fundamentalism",
-  "Republic", "Democracy", "Hive"
+  "Republic", "Democracy", "Hive", "Horde"
 allowed_terrains =
-  "Lake", "Ocean", "Desert", "Forest", "Grassland", "Hills", "Jungle",
-  "Mountains", "Plains", "Swamp", "Tundra", "Glacier", "River", "Waste"
+  "Lake", "Ocean", "Desert", "Forest", "Grassland", "Hills", "Jungle", "Lava Flats",
+  "Mountains", "Plains", "Swamp", "Tundra", "Glacier", "River", "Waste", "Verdant", "Blood Spires"
 allowed_styles =
   "European", "Classical", "Tropical", "Asian", "Babylonian", "Celtic"
 
